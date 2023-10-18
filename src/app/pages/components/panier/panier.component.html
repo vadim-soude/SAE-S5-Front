@@ -12,6 +12,12 @@
 <body>
 
 <div class="container">
+    <div>
+        <div id="test">TEST</div>
+    </div>
+    <div>
+        <button class="buttonAdd" (click)="clearProduct()" >Vider le panier</button>
+    </div>
     <div *ngFor="let product of products" >
         {{product.product.name}} : {{product.quantity}}
     </div>

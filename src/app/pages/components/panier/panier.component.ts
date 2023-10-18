@@ -40,4 +40,9 @@ export class PanierComponent implements OnInit {
         }
     }
 
+    clearProduct():void{
+        this.cacheService.set("panier","");
+        window.location.reload();
+    }
+
 }

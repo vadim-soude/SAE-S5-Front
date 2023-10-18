@@ -44,10 +44,6 @@ export class ShopComponent implements OnInit {
         });
     }
 
-    clearProduct():void{
-        this.cacheService.set("panier","vide");
-        //console.log(this.cacheService.get("panier"));
-    }
 
     addProduct(productID: string): void{
 
