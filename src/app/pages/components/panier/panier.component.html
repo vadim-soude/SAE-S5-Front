@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Panier</title>
+    <style>
+        @font-face {
+            font-family: Inter;
+            src: url("assets/Inter.ttf");
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div *ngFor="let product of products" >
+        {{product.product.name}} : {{product.quantity}}
+    </div>
+</div>
+
+
+</body>
+</html>

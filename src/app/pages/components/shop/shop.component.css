@@ -1,0 +1,155 @@
+.container {
+    justify-content: center;
+    align-items: center;
+    background: #09182D;
+    color: #B4B6BA;
+}
+
+.tab-container {
+    padding-top: 40px;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.list-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.item-title {
+    padding-bottom: 20px;
+    margin: 0 auto; /* Center the div horizontally */
+    text-align: center; /* Center the text horizontally */
+    background-color: transparent; /* Background color for the div */
+}
+
+.item-title {
+    padding-bottom: 20px;
+    margin: 0 auto; /* Center the div horizontally */
+    text-align: center; /* Center the text horizontally */
+    justify-content: center;
+    background-color: transparent; /* Background color for the div */
+}
+
+.price-title {
+    margin: 0 auto; /* Center the div horizontally */
+    display: flex;
+    text-align: center; /* Center the text horizontally */
+    background-color: transparent; /* Background color for the div */
+    flex-direction: row;
+}
+
+.product-title {
+    font-weight: normal; /* Set the font weight to regular */
+    text-align: center; /* Center the text horizontally */
+    font-size: 13pt;
+    font-family: "Inter",fantasy;
+}
+
+
+.price-type {
+    font-weight: normal; /* Set the font weight to regular */
+    font-size: 11pt;
+    font-family: "Inter",fantasy;
+}
+
+.list-title {
+    font-weight: bold; /* Set the font weight to regular */
+    font-size: 20pt;
+    font-family: "Inter",fantasy;
+}
+
+.black-bar-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+
+}
+
+.bar {
+    width: 30%; /* Set the width to 100% to make it span the entire container */
+    height: 1px; /* Set the height of the bar */
+    background-color: #B4B6BA; /* Black background color for the bar */
+
+}
+
+.list {
+    width: max-content;
+    display: flex;
+    list-style: none;
+    align-items: center;
+}
+
+.image {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
+
+.image-container {
+    background-color: #2A2D63; /* Background color for the div */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 20vh;
+    border-radius: 15px; /* Add rounded corners to the div */
+    padding: 10px ; /* Add 20 pixels of padding to the bottom of the image */
+}
+
+.list-item {
+    width: 20%; /* A quarter of the parent's width */
+    height: 100%;
+    padding-left: 35px;
+    right: 35px;
+    display: flex;
+    flex-direction: column;
+}
+
+.list-arrow {
+    width: 10%; /* A quarter of the parent's width */
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.buttonAdd {
+    padding: 3px 8px; /* Adjust padding as needed */
+    align-self: center;
+    color: #B4B6BA; /* Text color for the button */
+    background-color: transparent; /* Background color for the div */
+    border: 2px solid #B4B6BA;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.button-container {
+    padding-top: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.svg{
+    height: auto;
+    width: auto;
+}
+
+.round-button {
+    width: 50px; /* Set the width and height to make it round */
+    height: 50px;
+    padding: 0;
+    border-radius: 50%; /* Make the button round */
+    border-color: transparent;
+    background-color: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}

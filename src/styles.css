@@ -1,0 +1,22 @@
+/* You can add global styles to this file, and also import other style files */
+
+ul {
+    width: auto;
+    padding: 0;
+}
+
+body{
+    margin: 0;
+    width: auto;
+    -ms-overflow-style: none;  /* IE and Edge */
+    scrollbar-width: none;  /* Firefox */
+}
+
+body::-webkit-scrollbar {
+    display:none;
+}
+
+html {
+    scrollbar-width:none;
+}
+
