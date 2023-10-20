@@ -58,6 +58,7 @@ body{
 .bold-text {
     font-weight: bold;
     font-size: 16pt;
+    color: white;
 }
 
 a{
