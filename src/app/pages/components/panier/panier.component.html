@@ -24,6 +24,12 @@
             <div>
                 {{product.product.name}} : {{product.quantity}}
             </div>
+            <div>
+                <button class="buttonAdd" (click)="modifyQuantity(product.product.guid, 1)" >+1</button>
+            </div>
+            <div>
+                <button class="buttonAdd" (click)="modifyQuantity(product.product.guid, -1)" >-1</button>
+            </div>
         </div>
     </div>
 

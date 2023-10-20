@@ -40,6 +40,36 @@ export class PanierComponent implements OnInit {
         }
     }
 
+    modifyQuantity(productID: string, quantityChange: number):void{
+        let prod = this.products.find((element) => element.product.guid == productID)
+        let index = -1;
+        if (prod) {
+            index = this.products.indexOf(prod);
+        }
+        if(index != -1){
+            console.log(index);
+            this.products[index].quantity = this.products[index].quantity + quantityChange;
+        }
+        if(this.products[index].quantity <= 0){
+            this.products.splice(index,1)
+        }
+        this.setContent(this.products);
+    }
+
+    setContent(products: IProductsModel[]):void{
+        let tempString = "";
+        for (const product of products) {
+            for (let i = 0; i < product.quantity; i++) {
+                if(tempString == ""){
+                    tempString = product.product.guid;
+                }else{
+                    tempString = tempString + "|" + product.product.guid;
+                }
+            }
+        }
+        this.cacheService.set("panier",tempString);
+    }
+
     clearProduct():void{
         this.cacheService.set("panier","");
         window.location.reload();
