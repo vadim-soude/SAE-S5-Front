@@ -47,7 +47,6 @@ export class PanierComponent implements OnInit {
             index = this.products.indexOf(prod);
         }
         if(index != -1){
-            console.log(index);
             this.products[index].quantity = this.products[index].quantity + quantityChange;
         }
         if(this.products[index].quantity <= 0){
