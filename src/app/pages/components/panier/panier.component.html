@@ -18,9 +18,15 @@
     <div>
         <button class="buttonAdd" (click)="clearProduct()" >Vider le panier</button>
     </div>
-    <div *ngFor="let product of products" >
-        {{product.product.name}} : {{product.quantity}}
+
+    <div class="">
+        <div *ngFor="let product of products" class="list-item">
+            <div>
+                {{product.product.name}} : {{product.quantity}}
+            </div>
+        </div>
     </div>
+
 </div>
 
 
