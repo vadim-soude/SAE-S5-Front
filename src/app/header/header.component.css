@@ -45,14 +45,20 @@ body{
     display: flex;
     align-items: center;
     justify-content: center;
+    padding-right: 20px;
+}
+
+.logo{
+    height: inherit;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
 }
 
 .svg{
     height: 50%;
-}
-
-.spacer{
-    padding-right: 15px;
 }
 
 .bold-text {
