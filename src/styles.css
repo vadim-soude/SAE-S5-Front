@@ -5,18 +5,16 @@ ul {
     padding: 0;
 }
 
-body{
+body,html{
     margin: 0;
     width: auto;
     -ms-overflow-style: none;  /* IE and Edge */
     scrollbar-width: none;  /* Firefox */
+    padding: 0; /* Remove default padding */
+    background: #09182D;
 }
 
 body::-webkit-scrollbar {
     display:none;
-}
-
-html {
-    scrollbar-width:none;
 }
 
