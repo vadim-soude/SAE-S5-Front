@@ -13,24 +13,48 @@
 
 <div class="container">
     <div>
-        <div id="test">TEST</div>
+        <div id="test">Panier</div>
     </div>
-    <div>
-        <button class="buttonAdd" (click)="clearProduct()" >Vider le panier</button>
-    </div>
-
     <div class="">
         <div *ngFor="let product of products" class="list-item">
-            <div>
-                {{product.product.name}} : {{product.quantity}}
+            <div class="product">
+                <img class="image" src="{{product.product.imageUrl}}" alt="{{product.product.name}}">
+                <div class="productData">
+                    <div class="productName">{{product.product.name}}</div>
+                    <div class="quantityContainer">
+                        <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, -1)" >-</button>
+                        <div class="quantity">{{product.quantity}}</div>
+                        <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, 1)" >+</button>
+                    </div>
+                    <div class="quantityContainer">
+                        <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, - product.quantity)" >Supprimer</button>
+                    </div>
+                </div>
             </div>
-            <div>
-                <button class="buttonAdd" (click)="modifyQuantity(product.product.guid, 1)" >+1</button>
-            </div>
-            <div>
-                <button class="buttonAdd" (click)="modifyQuantity(product.product.guid, -1)" >-1</button>
+
+
+<!--            <div>-->
+<!--                Prix : {{getProductPrice(product.product,false) | number: "1.2-2" }}-->
+<!--            </div>-->
+<!--            <div>-->
+<!--                Prix pref: {{getProductPrice(product.product,true) | number: "1.2-2" }}-->
+<!--            </div>-->
+
+        </div>
+        <div class="list-item">
+            <div class="product">
+                <button class="buttonQuantity" (click)="clearProduct()" >Vider le panier</button>
             </div>
         </div>
+
+    </div>
+
+</div>
+<div class="containerCommand">
+
+    <div id="total-price">Prix Total : {{this.totalPriceDisplay | number: "1.2-2" }}€</div>
+    <div class="isPref">
+        Adhérent :<input type="checkbox" id="switch" (click)="debugSwitch()">
     </div>
 
 </div>
