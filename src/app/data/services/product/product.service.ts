@@ -51,7 +51,7 @@ export class ProductService {
             stock: 15
         },
         {
-            guid: "811379a6-6298-4ec0-aad6-adba03261c88",
+            guid: "811379a6-6298-4ec0-aad6-adba03261c87",
             name: "Twix",
             imageUrl: "assets/product/twix.png",
             price: .5,
