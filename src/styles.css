@@ -18,3 +18,8 @@ body::-webkit-scrollbar {
     display:none;
 }
 
+
+@font-face {
+    font-family: Inter;
+    src: url("assets/Inter.ttf");
+}
