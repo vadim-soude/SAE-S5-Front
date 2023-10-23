@@ -33,7 +33,7 @@ jobs:
       - name: Build with Jekyll
         uses: actions/jekyll-build-pages@v1
         with:
-          source: ./
+          source: ./src/
           destination: ./_site
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v2
@@ -49,4 +49,4 @@ jobs:
       - name: Angular Full CI
   # You may pin to the exact commit or the version.
   # uses: colbyhill21/angular-full-ci@a3489087f6a715db335078f999c01d422a254a6c
-        uses: colbyhill21/angular-full-ci@v1.0
+        uses: colbyhill21/angular-full-ci@v16.2.5
