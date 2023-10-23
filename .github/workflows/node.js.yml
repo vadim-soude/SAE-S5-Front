@@ -26,6 +26,6 @@ jobs:
       with:
         node-version: ${{ matrix.node-version }}
         cache: 'npm'
-    - run: npm i @angular/cli
+    - run: npm i -g @angular/cli
     - run: ng build
     - run: ng serve
