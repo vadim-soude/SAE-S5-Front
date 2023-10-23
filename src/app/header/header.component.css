@@ -49,6 +49,7 @@ body{
 }
 
 .logo{
+    max-height: 75px;
     height: inherit;
     width: auto;
     display: flex;
