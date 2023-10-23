@@ -28,6 +28,6 @@ jobs:
         cache: 'npm'
     - run: npm install -g @angular/cli
     - run: npm install -g
-    - run: npm i -g @angular-devkit/build-angular
+    - run: npm i --save-dev @angular-devkit/build-angular
     - run: ng build
     - run: ng serve
