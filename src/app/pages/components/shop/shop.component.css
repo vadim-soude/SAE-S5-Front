@@ -86,8 +86,8 @@
 }
 
 .image {
-    max-width: 100%;
-    height: auto;
+    max-height: inherit;
+    width: auto;
     display: block;
     margin: 0 auto;
 }
@@ -97,7 +97,8 @@
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 20vh;
+    max-height: 30vh;
+    max-width: 40vh;
     border-radius: 15px; /* Add rounded corners to the div */
     padding: 10px ; /* Add 20 pixels of padding to the bottom of the image */
 }
@@ -125,8 +126,8 @@
     color: #B4B6BA; /* Text color for the button */
     background-color: transparent; /* Background color for the div */
     border: 2px solid #B4B6BA;
-    cursor: pointer;
     border-radius: 20px;
+    cursor: pointer;
 }
 
 .button-container {
