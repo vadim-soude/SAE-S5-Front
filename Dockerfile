@@ -1,29 +1,21 @@
-FROM --platform=$BUILDPLATFORM node:17.0.1-bullseye-slim as builder
+FROM node:18-alpine AS build
 
-RUN mkdir /project
-WORKDIR /project
+RUN npm i -g @angular/cli
 
-RUN npm install -g @angular/cli@16
+# Copie du package.json dans l'image
+COPY ./package.json /SAE/package.json
+WORKDIR /SAE/
 
-COPY package.json package-lock.json ./
-RUN npm ci
+# Installation des dépendances
+RUN npm install
 
-COPY . .
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+# Copie du dossier d'app
+COPY . /SAE/
 
-FROM builder as dev-envs
+RUN ng build
 
-RUN <<EOF
-apt-get update
-apt-get install -y --no-install-recommends git
-EOF
+EXPOSE 8081
 
-RUN <<EOF
-useradd -s /bin/bash -m vscode
-groupadd docker
-usermod -aG docker vscode
-EOF
-# install Docker tools (cli, buildx, compose)
-COPY --from=gloursdocker/docker / /
+FROM nginx:1.24.0-alpine AS prod
 
-CMD ["ng", "serve", "--host", "0.0.0.0"]
+COPY --from=build /SAE/dist /usr/share/nginx/html
