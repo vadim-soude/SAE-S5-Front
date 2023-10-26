@@ -17,6 +17,7 @@ export class PanierComponent implements OnInit {
 
     products: IProductsModel[] = [];
     isPref: boolean = false;
+    isConditionOk: boolean = false;
     productMap = new Map<IProductModel,number>();
     totalPrice: number = 0;
     totalPricePref: number = 0;
@@ -90,6 +91,15 @@ export class PanierComponent implements OnInit {
             this.isPref = false;
         }else{
             this.isPref = true;
+        }
+        this.getTotalPrice()
+    }
+
+    debugSwitch2():void{
+        if(this.isConditionOk){
+            this.isConditionOk = false;
+        }else{
+            this.isConditionOk = true;
         }
         this.getTotalPrice()
     }
