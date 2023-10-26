@@ -1,64 +1,82 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <title>Panier</title>
-    <style>
-        @font-face {
-            font-family: Inter;
-            src: url("assets/Inter.ttf");
-        }
-    </style>
-</head>
 <body>
-
 <div class="container">
-    <div>
-        <div id="test">Panier</div>
-    </div>
-    <div class="">
-        <div *ngFor="let product of products" class="list-item">
-            <div class="product">
-                <img class="image" src="{{product.product.imageUrl}}" alt="{{product.product.name}}">
-                <div class="productData">
-                    <div class="productName">{{product.product.name}}</div>
-                    <div class="quantityContainer">
-                        <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, -1)" >-</button>
-                        <div class="quantity">{{product.quantity}}</div>
-                        <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, 1)" >+</button>
-                    </div>
-                    <div class="quantityContainer">
-                        <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, - product.quantity)" >Supprimer</button>
+    <div class="containerTopList">
+        <div class="containerList">
+            <div>
+                <div id="test" class="cart">Produits :</div>
+            </div>
+            <div class="">
+                <div *ngFor="let product of products" class="list-item">
+                    <div class="product">
+                        <div class="image">
+                            <img class="imageProduct" src="{{product.product.imageUrl}}" alt="{{product.product.name}}">
+                        </div>
+                        <div class="productData">
+                            <div class="productName">{{product.product.name}}</div>
+                            <div class="quantityContainer">
+                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, -1)" >-</button>
+                                <div class="quantity">{{product.quantity}}</div>
+                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, 1)" >+</button>
+                            </div>
+                            <div class="quantityContainer">
+                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, - product.quantity)" >Supprimer</button>
+                            </div>
+                        </div>
+
                     </div>
                 </div>
+                <div class="list-item">
+                    <div class="">
+                        <button class="buttonQuantity" (click)="clearProduct()" >Vider le panier</button>
+                    </div>
+                </div>
+
             </div>
 
-
-<!--            <div>-->
-<!--                Prix : {{getProductPrice(product.product,false) | number: "1.2-2" }}-->
-<!--            </div>-->
-<!--            <div>-->
-<!--                Prix pref: {{getProductPrice(product.product,true) | number: "1.2-2" }}-->
-<!--            </div>-->
-
         </div>
-        <div class="list-item">
-            <div class="product">
-                <button class="buttonQuantity" (click)="clearProduct()" >Vider le panier</button>
+    </div>
+    <div class="containerCommand">
+        <div id="total-price" class="elementCommand">
+            Prix Total : {{this.totalPriceDisplay | number: "1.2-2" }}€
+        </div>
+        <div class="isPref">
+            Adhérent :<input type="checkbox" id="switch" (click)="debugSwitch()">
+        </div>
+
+        <div class="isPref" *ngIf="totalPriceDisplay >= 1" >
+            <div>
+                Je reconnais avoir pris connaissance de toutes les informations et accepter les CGU-CGV :
             </div>
+            <input type="checkbox" id="switch2" (click)="debugSwitch2()">
         </div>
 
+        <button *ngIf="totalPriceDisplay >= 1 && isConditionOk" class="buttonAdd" >Valider et payer</button>
+        <button *ngIf="totalPriceDisplay >= 1 && !isConditionOk" class="buttonAddNo" >Valider et payer</button>
+        <div *ngIf="totalPriceDisplay < 1" class="buttonAddNo" >Payment impossible sous 1€</div>
     </div>
 
-</div>
-<div class="containerCommand">
+    <div class="containerInfo">
 
-    <div id="total-price">Prix Total : {{this.totalPriceDisplay | number: "1.2-2" }}€</div>
-    <div class="isPref">
-        Adhérent :<input type="checkbox" id="switch" (click)="debugSwitch()">
+        <div class="infoTitle">
+            Information :
+        </div>
+
+        <div class="info">
+            - Vous devez retiré votre commande au local du BDE InfoContact.
+        </div>
+        <div class="info">
+            - Pour retiré une commande beneficiant d'un tarif adhérent, vous devez presenter votre carte adherent pour retirer votre commande.
+        </div>
+        <div class="info">
+            - Veuillez noter que le local du BDE InfoContact peut etre fermé, a vous de retiré votre commande quand celui-ci est ouvert.
+        </div>
+        <div class="info">
+            - Les payments sont impossible pour une valeur inferieure a un (1) euro.
+        </div>
     </div>
-
 </div>
-
 
 </body>
 </html>
