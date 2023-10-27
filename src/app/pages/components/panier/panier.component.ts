@@ -26,16 +26,18 @@ export class PanierComponent implements OnInit {
     constructor(private productService: ProductService, private cacheService : CacheService) { }
 
     ngOnInit() {
-        var cachePanier = this.cacheService.get("panier");
+        const cachePanier = this.cacheService.get("panier");
         for (let cachePanierElement of cachePanier.split("|")) {
-            if(cachePanierElement != ''){
-                let product = this.productService.getProductByGUID(cachePanierElement);
-                if(product != null){
-                    if(this.productMap.has(product)){
-                        // @ts-ignore
-                        this.productMap.set(product,this.productMap.get(product)+1);
-                    }else{
-                        this.productMap.set(product,1);
+            if(cachePanierElement != null){
+                if(cachePanierElement != ''){
+                    let product = this.productService.getProductByGUID(cachePanierElement);
+                    if(product != null){
+                        if(this.productMap.has(product)){
+                            // @ts-ignore
+                            this.productMap.set(product,this.productMap.get(product)+1);
+                        }else{
+                            this.productMap.set(product,1);
+                        }
                     }
                 }
             }
