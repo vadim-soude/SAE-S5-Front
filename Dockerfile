@@ -20,4 +20,5 @@ FROM nginx:1.24.0-alpine AS prod
 
 RUN rm /etc/nginx/conf.d/default.conf
 COPY nginx.conf /etc/nginx/conf.d
+RUN mv /etc/nginx/conf.d/nginx.conf /etc/nginx/conf.d/default.conf
 COPY --from=build /SAE/dist /usr/share/nginx/html
