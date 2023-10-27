@@ -27,10 +27,6 @@ export class PanierComponent implements OnInit {
 
     ngOnInit() {
         let cachePanier = this.cacheService.get("panier");
-        if(cachePanier == null){
-            this.cacheService.set("panier","");
-            cachePanier = "";
-        }
         for (let cachePanierElement of cachePanier.split("|")) {
             if(cachePanierElement != ''){
                 let product = this.productService.getProductByGUID(cachePanierElement);

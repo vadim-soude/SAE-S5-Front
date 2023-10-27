@@ -11,6 +11,11 @@ export class CacheService {
 
     get(key: string): any {
         const cachedValue = localStorage.getItem(key);
-        return cachedValue ? JSON.parse(cachedValue) : null;
+        let data =  cachedValue ? JSON.parse(cachedValue) : null;
+        if (data == null){
+            return "";
+        }else{
+            return data;
+        }
     }
 }
