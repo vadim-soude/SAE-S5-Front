@@ -10,6 +10,10 @@ export default [
                 loadComponent: () => import("./components/about/about.component").then(module => module.AboutComponent)
             },
             {
+                path: "projects",
+                loadComponent: () => import("./components/projects/projects.component").then(module => module.ProjectsComponent)
+            },
+            {
                 path: "shop",
                 loadComponent: () => import("./components/shop/shop.component").then(module => module.ShopComponent)
             },
