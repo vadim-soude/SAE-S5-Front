@@ -27,6 +27,11 @@ export class PanierComponent implements OnInit {
 
     ngOnInit() {
         let cachePanier = this.cacheService.get("panier");
+
+        if(cachePanier == null){
+            cachePanier = "";
+        }
+
         for (let cachePanierElement of cachePanier.split("|")) {
             if(cachePanierElement != ''){
                 let product = this.productService.getProductByGUID(cachePanierElement);
@@ -44,6 +49,7 @@ export class PanierComponent implements OnInit {
             this.products.push({product: productMapElement[0], quantity: productMapElement[1]});
         }
         this.getTotalPrice();
+
     }
 
     modifyQuantity(productID: string, quantityChange: number):void{
