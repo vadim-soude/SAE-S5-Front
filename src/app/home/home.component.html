@@ -1,1 +1,60 @@
-<p>home works!</p>
+<!DOCTYPE html>
+<html>
+
+<body>
+    <div class="container">
+
+        <div class="tab-container">
+            <div class="block-list">
+                <div *ngFor="let contenu of contenus[0]" class="block-presentation">
+                    <div class="title-presentation">
+                        <h1 class="item-title">{{ contenu.nom }}</h1>
+                    </div>
+                    <div class="item-presentation">
+                        <h1 class="presentation">{{ contenu.content }}</h1>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-container">
+            <div class="block-list">
+                <div *ngFor="let contenu of contenus[1]" class="block-valeur">
+                    <div class="title-valeur">
+                        <h1 class="item-title">{{ contenu.nom }}</h1>
+                    </div>
+                    <div class="item-valeur">
+                        <p class="valeur">{{ contenu.content }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="tab-container">
+            <div class="block-list">
+                <div class="partenaires-list">
+                    <div class="block-partenaires">
+                        <div class="item-title">
+                            <h1 class="item-title">{{ contenus[2][0].nom }}</h1>
+                        </div>
+                        <div class="container-partenaires">
+                            <div class="partenaires-row">
+                                <div *ngFor="let contenu of contenus[3]" class="item-partenaires">
+                                    <div *ngIf="contenu.id >= 'contenu-4'" class="item-partenaires-name">
+                                        <h2 class="partenaires">{{ contenu.nomPartenaire }}</h2>
+                                    </div>
+                                    <div *ngIf="contenu.id >= 'contenu-4'" class="item-partenaires-image">
+                                        <img class="image" src="{{ contenu.imageURL }}" alt="{{ contenu.nomPartenaire }}">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+
+</html>

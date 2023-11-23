@@ -24,6 +24,10 @@ export default [
             {
                 path: "panier",
                 loadComponent: () => import("./components/panier/panier.component").then(module => module.PanierComponent)
+            },
+            {
+                path: "actualites",
+                loadComponent: () => import("./components/actualites/actualites.component").then(module => module.ActualitesComponent)
             }
         ]
     }
