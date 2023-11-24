@@ -12,8 +12,18 @@
     <div class = "tab-container">
         <div class="list-container">
             <div class="list">
-                <div class="list-item">
-                    <a [ngClass]="{'bold-text': currentPage === ''}" routerLink="/">INFO CONTACT</a>
+                <div class="dropdown">
+                    <div class="list-item">
+                        <a [ngClass]="{'bold-text': currentPage === ''}" routerLink="/">INFO CONTACT</a>
+                        <div class="dropdown-content">
+                            <a routerLink="/page/membresBureau">
+                                Membres du bureau
+                            </a>
+                            <a routerLink="/page/membres">
+                                Nos membres
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="list-item">
                     <a [ngClass]="{'bold-text': currentPage === 'projects'}" routerLink="/page/projects" >NOS PROJETS</a>
