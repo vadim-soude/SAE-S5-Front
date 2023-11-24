@@ -28,6 +28,10 @@ export default [
             {
                 path: "actualites",
                 loadComponent: () => import("./components/actualites/actualites.component").then(module => module.ActualitesComponent)
+            },
+            {
+                path: "membresBureau",
+                loadComponent: () => import("./components/membresBureau/membresBureau.component").then(module => module.MembresBureauComponent)
             }
         ]
     }
