@@ -6,7 +6,7 @@ import {IMembresBureauModel} from "../../../data/models/membresBureau.model";
 import {MembresBureauService} from "../../../data/services/membresBureau/membresBureau.service";
 
 @Component({
-    selector: 'app-membres-bureau',
+    selector: 'app-adherents-bureau',
     standalone: true,
     imports: [CommonModule, ActiveDirective, RouterLink],
     templateUrl: './membresBureau.component.html',

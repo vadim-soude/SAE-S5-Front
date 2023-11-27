@@ -32,6 +32,10 @@ export default [
             {
                 path: "membresBureau",
                 loadComponent: () => import("./components/membresBureau/membresBureau.component").then(module => module.MembresBureauComponent)
+            },
+            {
+                path: "adherents",
+                loadComponent: () => import("./components/adherents/adherents.component").then(module => module.AdherentsComponent)
             }
         ]
     }
