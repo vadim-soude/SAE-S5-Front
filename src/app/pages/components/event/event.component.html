@@ -2,5 +2,38 @@
 <html>
 <body>
 
+    <div class="container">
+        <div class="tab-container">
+            <div *ngFor="let event of event[0]" class="block-event">
+                <div class="block-contenu">
+                    <div class="event-title">
+                        <h1 class="title">{{ event.nom }}</h1>
+                    </div>
+                    <div class="event-image">
+                        <img class="image" src="{{ event.imageUrl }}" alt="{{ event.nom }}">
+                    </div>
+                    <div class="event-corps">
+                        <h2 class="corps">{{ event.corps }}</h2>
+                    </div>
+                    <div class="event-date">
+                        <h2 class="date">{{ event.dateDeb }} - {{ event.dateFin }}</h2>
+                    </div>
+                    <div class="event-lieu">
+                        <h2 class="lieu">{{ event.lieu }}</h2>
+                    </div>
+                    <div class="event-condition">
+                        <h2 class="condition">{{ event.condition }}</h2>
+                    </div>
+                    <div class="event-inscription">
+                        <h2 class="inscription">S'inscrire <a href="page/inscription">ici</a></h2>
+                    </div>
+                    <div class="event-information">
+                        <h2 class="information">{{ event.auteur }} le {{ event.dateModif }}</h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </body>
 </html>
