@@ -18,12 +18,16 @@ export default [
                 loadComponent: () => import("./components/shop/shop.component").then(module => module.ShopComponent)
             },
             {
-                path: "account",
-                loadComponent: () => import("./components/account/account.component").then(module => module.AccountComponent)
+                path: "login",
+                loadComponent: () => import("./components/login/login.component").then(module => module.LoginComponent)
             },
             {
-                path: "panier",
-                loadComponent: () => import("./components/panier/panier.component").then(module => module.PanierComponent)
+                path: "signup",
+                loadComponent: () => import("./components/signup/signup.component").then(module => module.SignupComponent)
+            },
+            {
+                path: "cart",
+                loadComponent: () => import("./components/cart/cart.component").then(module => module.CartComponent)
             }
         ]
     }

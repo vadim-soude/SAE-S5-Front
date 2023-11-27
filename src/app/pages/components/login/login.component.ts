@@ -2,12 +2,13 @@ import { Component } from "@angular/core";
 import { CommonModule } from "@angular/common";
 
 @Component({
-    selector: "app-account",
+    selector: "app-login",
     standalone: true,
     imports: [CommonModule],
-    templateUrl: "./account.component.html",
-    styleUrls: ["./account.component.css"]
+    templateUrl: "./login.component.html",
+    styleUrls: ["./login.component.css"]
 })
-export class AccountComponent {
+
+export class LoginComponent {
 
 }

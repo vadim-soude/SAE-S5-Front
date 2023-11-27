@@ -47,15 +47,15 @@ export class ShopComponent implements OnInit {
 
     addProduct(productID: string): void{
 
-        let data = this.cacheService.get("panier");
+        let data = this.cacheService.get("cart");
 
         if(!(data == "vide")){
-            this.cacheService.set("panier",data+"|"+productID);
+            this.cacheService.set("cart",data+"|"+productID);
 
         }else{
-            this.cacheService.set("panier",productID);
+            this.cacheService.set("cart",productID);
         }
-        // console.log(this.cacheService.get("panier"));
+        // console.log(this.cacheService.get("cart"));
     }
 
     previousProduct(productsCategory: number): void {

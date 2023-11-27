@@ -9,11 +9,11 @@ import {CacheService} from "../../../data/services/cache/cache.service";
     selector: "app-shop",
     standalone: true,
     imports: [CommonModule, NgOptimizedImage],
-    templateUrl: "./panier.component.html",
-    styleUrls: ["./panier.component.css"]
+    templateUrl: "./cart.component.html",
+    styleUrls: ["./cart.component.css"]
 })
 
-export class PanierComponent implements OnInit {
+export class CartComponent implements OnInit {
 
     products: IProductsModel[] = [];
     isPref: boolean = false;
@@ -26,7 +26,7 @@ export class PanierComponent implements OnInit {
     constructor(private productService: ProductService, private cacheService : CacheService) { }
 
     ngOnInit() {
-        let cachePanier = this.cacheService.get("panier");
+        let cachePanier = this.cacheService.get("cart");
 
         if(cachePanier == null){
             cachePanier = "";
@@ -74,7 +74,7 @@ export class PanierComponent implements OnInit {
                 }
             }
         }
-        this.cacheService.set("panier",tempString);
+        this.cacheService.set("cart",tempString);
         this.getTotalPrice();
     }
 
@@ -111,7 +111,7 @@ export class PanierComponent implements OnInit {
     }
 
     clearProduct():void{
-        this.cacheService.set("panier","");
+        this.cacheService.set("cart","");
         window.location.reload();
     }
 
