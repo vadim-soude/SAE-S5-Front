@@ -16,11 +16,11 @@
                     <div class="list-item">
                         <a [ngClass]="{'bold-text': currentPage === ''}" routerLink="/">INFO CONTACT</a>
                         <div class="dropdown-content">
-                            <a routerLink="/page/membresBureau">
+                            <a [ngClass]="{'bold-text': currentPage === 'membresBureau'}" routerLink="/page/membresBureau">
                                 Membres du bureau
                             </a>
-                            <a routerLink="/page/adherents">
-                                Nos membres
+                            <a [ngClass]="{'bold-text': currentPage === 'adherents'}" routerLink="/page/adherents">
+                                Nos adhérents
                             </a>
                         </div>
                     </div>

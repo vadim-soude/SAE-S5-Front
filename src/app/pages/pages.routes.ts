@@ -36,6 +36,14 @@ export default [
             {
                 path: "adherents",
                 loadComponent: () => import("./components/adherents/adherents.component").then(module => module.AdherentsComponent)
+            },
+            {
+                path: "event",
+                loadComponent: () => import("./components/event/event.component").then(module => module.EventComponent)
+            },
+            {
+                path: "article",
+                loadComponent: () => import("./components/article/article.component").then(module => module.ArticleComponent)
             }
         ]
     }
