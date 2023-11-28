@@ -1,9 +1,10 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { ProductService } from "../../../data/services/product/product.service";
 import { IProductModel } from "../../../data/models/product.model";
 import { IProductsModel } from "../../../data/models/products.model";
 import {CacheService} from "../../../data/services/cache/cache.service";
+import { AuthService } from "../../../data/auth/auth.service";
 
 @Component({
     selector: "app-shop",
@@ -22,6 +23,7 @@ export class CartComponent implements OnInit {
     totalPrice: number = 0;
     totalPricePref: number = 0;
     totalPriceDisplay: number = 0;
+    auth = inject(AuthService);
 
     constructor(private productService: ProductService, private cacheService : CacheService) { }
 
@@ -30,6 +32,11 @@ export class CartComponent implements OnInit {
 
         if(cachePanier == null){
             cachePanier = "";
+        }
+
+        if(this.auth.isSubscribe()){
+            this.isPref = true;
+            this.getTotalPrice();
         }
 
         for (let cachePanierElement of cachePanier.split("|")) {
@@ -79,6 +86,7 @@ export class CartComponent implements OnInit {
     }
 
     getTotalPrice(){
+        console.log(this.isPref)
         this.totalPrice = 0;
         this.totalPricePref = 0;
         for (const products of this.products) {
