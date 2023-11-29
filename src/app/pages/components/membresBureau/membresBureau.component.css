@@ -6,6 +6,12 @@
 
 .tab-container {
     text-align: center;
+    padding: 50px;
+}
+
+.box-bureau {
+    background-color: #2a2d63;
+    border: 3px solid white;
 }
 
 .block-presidence, .block-tresorie,
@@ -44,7 +50,8 @@
 
 .membre-bde {
     background-color: #2A2D63;
-    border: 2px solid black;
+    border: 2px solid white;
+    border-radius: 10px;
     padding: 20px;
     color: white;
 }

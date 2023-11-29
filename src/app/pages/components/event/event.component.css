@@ -7,11 +7,13 @@
     display: flex;
     justify-content: center;
     align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
 }
 
 .block-contenu {
     background-color: #2A2D63;
-    border: 3px solid black;
+    border: 3px solid white;
 }
 
 .event-title, .event-image,
