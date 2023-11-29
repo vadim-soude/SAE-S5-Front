@@ -4,137 +4,139 @@
 
     <div class="container">
         <div class="tab-container">
-            <div class="block-presidence">
-                <div class="item-title">
-                    <h1 class="presidence">{{ membres[0][0].category }}</h1>
-                </div>
-                <div class="list-row">
-                    <div *ngFor="let membre of membres[0]" class="list">
-                        <div class="list-item">
-                            <div class="membre-bde">
-                                <div class="image">
-                                    <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
-                                </div>
-                                <div class="identite">
-                                    <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
-                                </div>
-                                <div class="role">
-                                    <h3 class="roleMembre">{{ membre.role }}</h3>
+            <div class="box-bureau">
+                <div class="block-presidence">
+                    <div class="item-title">
+                        <h1 class="presidence">{{ membres[0][0].category }}</h1>
+                    </div>
+                    <div class="list-row">
+                        <div *ngFor="let membre of membres[0]" class="list">
+                            <div class="list-item">
+                                <div class="membre-bde">
+                                    <div class="image">
+                                        <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
+                                    </div>
+                                    <div class="identite">
+                                        <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
+                                    </div>
+                                    <div class="role">
+                                        <h3 class="roleMembre">{{ membre.role }}</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="block-tresorie">
-                <div class="item-title">
-                    <h1 class="tresorie">{{ membres[1][0].category }}</h1>
-                </div>
-                <div class="list-row">
-                    <div *ngFor="let membre of membres[1]" class="list">
-                        <div class="list-item">
-                            <div class="membre-bde">
-                                <div class="image">
-                                    <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
-                                </div>
-                                <div class="identite">
-                                    <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
-                                </div>
-                                <div class="role">
-                                    <h3 class="roleMembre">{{ membre.role }}</h3>
+                <div class="block-tresorie">
+                    <div class="item-title">
+                        <h1 class="tresorie">{{ membres[1][0].category }}</h1>
+                    </div>
+                    <div class="list-row">
+                        <div *ngFor="let membre of membres[1]" class="list">
+                            <div class="list-item">
+                                <div class="membre-bde">
+                                    <div class="image">
+                                        <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
+                                    </div>
+                                    <div class="identite">
+                                        <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
+                                    </div>
+                                    <div class="role">
+                                        <h3 class="roleMembre">{{ membre.role }}</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="block-secretaria">
-                <div class="item-title">
-                    <h1 class="secretaria">{{ membres[2][0].category }}</h1>
-                </div>
-                <div class="list-row">
-                    <div *ngFor="let membre of membres[2]" class="list">
-                        <div class="list-item">
-                            <div class="membre-bde">
-                                <div class="image">
-                                    <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
-                                </div>
-                                <div class="identite">
-                                    <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
-                                </div>
-                                <div class="role">
-                                    <h3 class="roleMembre">{{ membre.role }}</h3>
+                <div class="block-secretaria">
+                    <div class="item-title">
+                        <h1 class="secretaria">{{ membres[2][0].category }}</h1>
+                    </div>
+                    <div class="list-row">
+                        <div *ngFor="let membre of membres[2]" class="list">
+                            <div class="list-item">
+                                <div class="membre-bde">
+                                    <div class="image">
+                                        <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
+                                    </div>
+                                    <div class="identite">
+                                        <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
+                                    </div>
+                                    <div class="role">
+                                        <h3 class="roleMembre">{{ membre.role }}</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="block-coordinateur">
-                <div class="item-title">
-                    <h1 class="coordinateur">{{ membres[3][0].category }}</h1>
-                </div>
-                <div class="list-row">
-                    <div *ngFor="let membre of membres[3]" class="list">
-                        <div class="list-item">
-                            <div class="membre-bde">
-                                <div class="image">
-                                    <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
-                                </div>
-                                <div class="identite">
-                                    <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
-                                </div>
-                                <div class="role">
-                                    <h3 class="roleMembre">{{ membre.role }}</h3>
+                <div class="block-coordinateur">
+                    <div class="item-title">
+                        <h1 class="coordinateur">{{ membres[3][0].category }}</h1>
+                    </div>
+                    <div class="list-row">
+                        <div *ngFor="let membre of membres[3]" class="list">
+                            <div class="list-item">
+                                <div class="membre-bde">
+                                    <div class="image">
+                                        <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
+                                    </div>
+                                    <div class="identite">
+                                        <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
+                                    </div>
+                                    <div class="role">
+                                        <h3 class="roleMembre">{{ membre.role }}</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="block-communication">
-                <div class="item-title">
-                    <h1 class="communication">{{ membres[4][0].category }}</h1>
-                </div>
-                <div class="list-row">
-                    <div *ngFor="let membre of membres[4]" class="list">
-                        <div class="list-item">
-                            <div class="membre-bde">
-                                <div class="image">
-                                    <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
-                                </div>
-                                <div class="identite">
-                                    <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
-                                </div>
-                                <div class="role">
-                                    <h3 class="roleMembre">{{ membre.role }}</h3>
+                <div class="block-communication">
+                    <div class="item-title">
+                        <h1 class="communication">{{ membres[4][0].category }}</h1>
+                    </div>
+                    <div class="list-row">
+                        <div *ngFor="let membre of membres[4]" class="list">
+                            <div class="list-item">
+                                <div class="membre-bde">
+                                    <div class="image">
+                                        <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
+                                    </div>
+                                    <div class="identite">
+                                        <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
+                                    </div>
+                                    <div class="role">
+                                        <h3 class="roleMembre">{{ membre.role }}</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
 
-            <div class="block-evenementiel">
-                <div class="item-title">
-                    <h1 class="evenementiel">{{ membres[5][0].category }}</h1>
-                </div>
-                <div class="list-row">
-                    <div *ngFor="let membre of membres[5]" class="list">
-                        <div class="list-item">
-                            <div class="membre-bde">
-                                <div class="image">
-                                    <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
-                                </div>
-                                <div class="identite">
-                                    <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
-                                </div>
-                                <div class="role">
-                                    <h3 class="roleMembre">{{ membre.role }}</h3>
+                <div class="block-evenementiel">
+                    <div class="item-title">
+                        <h1 class="evenementiel">{{ membres[5][0].category }}</h1>
+                    </div>
+                    <div class="list-row">
+                        <div *ngFor="let membre of membres[5]" class="list">
+                            <div class="list-item">
+                                <div class="membre-bde">
+                                    <div class="image">
+                                        <img class="imgMembre" src="{{ membre.imageURL }}" alt="{{ membre.role }}">
+                                    </div>
+                                    <div class="identite">
+                                        <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
+                                    </div>
+                                    <div class="role">
+                                        <h3 class="roleMembre">{{ membre.role }}</h3>
+                                    </div>
                                 </div>
                             </div>
                         </div>
