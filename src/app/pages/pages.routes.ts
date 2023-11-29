@@ -44,6 +44,18 @@ export default [
             {
                 path: "article",
                 loadComponent: () => import("./components/article/article.component").then(module => module.ArticleComponent)
+            },
+            {
+                path: "contact",
+                loadComponent: () => import("./components/contact/contact.component").then(module => module.ContactComponent)
+            },
+            {
+                path: "cgu",
+                loadComponent: () => import("./components/cgu/cgu.component").then(module => module.CguComponent)
+            },
+            {
+                path: "cgv",
+                loadComponent: () => import("./components/cgv/cgv.component").then(module => module.CgvComponent)
             }
         ]
     }
