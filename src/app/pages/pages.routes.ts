@@ -56,6 +56,10 @@ export default [
             {
                 path: "cgv",
                 loadComponent: () => import("./components/cgv/cgv.component").then(module => module.CgvComponent)
+            },
+            {
+                path: "historique",
+                loadComponent: () => import("./components/historique/historique.component").then(module => module.HistoriqueComponent)
             }
         ]
     }

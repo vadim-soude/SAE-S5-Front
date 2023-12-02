@@ -1,0 +1,136 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.tab-container {
+    padding: 50px;
+}
+
+.profil-contenu {
+    background-color: #2a2d63;
+    border: 3px solid white;
+    padding: 20px;
+    color: white;
+}
+
+.block-title {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: left;
+    padding-bottom: 20px;
+}
+
+.block-contenu-up {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-around;
+    width: 100%;
+    padding-bottom: 20px;
+}
+
+.block-contenu-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.block-prenom,
+.block-nom,
+.block-email,
+.block-statut {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item-prenom h2,
+.item-nom h2,
+.item-email h2,
+.item-statut h2 {
+    margin: 0;
+    width: 120px;
+}
+
+.champs-prenom,
+.champs-nom,
+.champs-email,
+.champs-statut {
+    align-self: center;
+}
+
+.block-image {
+    display: block;
+    justify-content: center;
+    align-content: center;
+    width: 25%;
+}
+
+.item-image {
+    max-width: 75%;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 2px solid black;
+}
+
+.item-image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.btn-image {
+    padding-top: 20px;
+}
+
+.block-contenu-bottom {
+    display: flex;
+    flex-direction: column;
+}
+
+.block-birthday, .block-discord, .block-mdp {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.item-birthday h2, .item-discord h2, .item-mdp h2 {
+    margin: 0;
+    width: auto;
+    padding: 20px;
+}
+
+.champs-birthday, .champs-discord, .champs-mdp{
+    align-self: center;
+}
+
+.btn-discord, .btn-mdp {
+    padding-left: 20px;
+}
+
+.block-commentaire {
+    display: block;
+    align-items: center;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.commentaire {
+    width: 100%;
+    resize: none;
+    overflow-y: hidden;
+    font-size: large;
+}
+
+.btn-commentaire {
+    padding-top: 20px;
+    font-size: 5pt;
+    display: flex;
+    justify-content: end;
+}
+
+input {
+    border-radius: 10px;
+}

@@ -1,1 +1,117 @@
-<p>account works!</p>
+<!doctype html>
+<html>
+<body>
+<div class="container">
+    <div class="tab-container">
+        <div *ngFor="let profil of account[0]" class="profil-contenu">
+            <div class="block-title">
+                <div class="item-title">
+                    <h1 class="title">{{ profil.titre }} {{ profil.nomUser }}</h1>
+                </div>
+                <form class="form-profil" method="post" action="">
+                    <div class="contenu-profil">
+
+                        <div class="block-contenu-up">
+                            <div class="block-image">
+                                <div class="item-image">
+                                    <img class="image" src="{{ profil.imageUrl }}" alt="{{ profil.nomUser }}">
+                                </div>
+                                <div class="btn-image">
+                                    <input type="submit" name="btn-image" id="btn-image" class="btn-profil" value="{{ profil.btnImage }}" />
+                                </div>
+                            </div>
+
+                            <div class="block-contenu-left">
+                                <div class="block-prenom">
+                                    <div class="item-prenom">
+                                        <h2 class="label-prenom">{{ profil.labelPrenom }}</h2>
+                                    </div>
+                                    <div class="champs-prenom">
+                                        <h2 class="prenom">{{ profil.prenom }}</h2>
+                                    </div>
+                                </div>
+
+                                <div class="block-nom">
+                                    <div class="item-nom">
+                                        <h2 class="label-nom">{{ profil.labelNom }}</h2>
+                                    </div>
+                                    <div class="champs-nom">
+                                        <h2 class="nom">{{ profil.nom }}</h2>
+                                    </div>
+                                </div>
+
+                                <div class="block-email">
+                                    <div class="item-email">
+                                        <h2 class="label-email">{{ profil.labelEmail }}</h2>
+                                    </div>
+                                    <div class="champs-email">
+                                        <h2 class="email">{{ profil.email }}</h2>
+                                    </div>
+                                </div>
+
+                                <div class="block-statut">
+                                    <div class="item-statut">
+                                        <h2 class="label-statut">{{ profil.labelStatut }}</h2>
+                                    </div>
+                                    <div class="champs-statut">
+                                        <h2 class="statut">{{ profil.statut }}</h2>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="block-contenu-bottom">
+                            <div class="block-birthday">
+                                <div class="item-birthday">
+                                    <h2 class="label-birthday">{{ profil.labelBirthday }}</h2>
+                                </div>
+                                <div class="champs-birthday">
+                                    <h2 class="birthday">{{ profil.birthday }}</h2>
+                                </div>
+                            </div>
+
+                            <div class="block-discord">
+                                <div class="item-discord">
+                                    <h2 class="label-discord">{{ profil.labelDiscord }}</h2>
+                                </div>
+                                <div class="champs-discord">
+                                    <h2 class="discord">{{ profil.nameDiscord }}</h2>
+                                </div>
+                                <div class="btn-discord">
+                                    <input type="submit" name="btn-discord" id="btn-discord" class="btn-profil" value="{{ profil.btnDiscord }}" />
+                                </div>
+                            </div>
+
+                            <div class="block-mdp">
+                                <div class="item-mdp">
+                                    <h2 class="label-mdp">{{ profil.labelMdp }}</h2>
+                                </div>
+                                <div class="champs-mdp">
+                                    <h2 class="discord">{{ profil.mdp }}</h2>
+                                </div>
+                                <div class="btn-mdp">
+                                    <input type="submit" name="btn-mdp" id="btn-mdp" class="btn-profil" value="{{ profil.btnMdp }}" />
+                                </div>
+                            </div>
+
+                            <div class="block-commentaire">
+                                <div class="item-commentaire">
+                                    <h2 class="label-commentaire">{{ profil.labelCommentaire }}</h2>
+                                </div>
+                                <div class="champs-commentaire">
+                                    <textarea class="commentaire" rows="15">{{ profil.commentaire }}</textarea>
+                                </div>
+                                <div class="btn-commentaire">
+                                    <input type="submit" name="btn-commentaire" id="btn-commentaire" class="btn-profil" value="{{ profil.btnCommentaire }}" />
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

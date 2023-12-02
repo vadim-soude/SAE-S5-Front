@@ -86,7 +86,9 @@ a{
     background-color: #2A2D63;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    right: 0;
 }
+
 
 .dropdown-content a {
     display: block;
