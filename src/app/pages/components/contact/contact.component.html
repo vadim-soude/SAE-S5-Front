@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div class="container">
+        <div class="tab-container">
+            <div class="container-form">
+                <div *ngFor="let contact of contact[0]" class="block-form">
+                    <form class="form-contact" method="post" action="">
+                        <div class="form-title">
+                            <h1 class="title">{{ contact.titre }}</h1>
+                        </div>
+                        <div class="block-name">
+                            <label class="label-name">{{ contact.nom }}</label>
+                            <input type="text" class="input-name" id="input-name" name="input-name">
+                        </div>
+                        <div class="block-prenom">
+                            <label class="label-prenom">{{ contact.prenom }}</label>
+                            <input type="text" class="input-prenom" id="input-prenom" name="input-prenom">
+                        </div>
+                        <div class="block-email">
+                            <label class="label-email">{{ contact.email }}</label>
+                            <input type="text" class="input-email" id="input-email" name="input-email">
+                        </div>
+                        <div class="block-message">
+                            <label class="label-message">{{ contact.contenu }}</label>
+                            <textarea id="input_message" name="input_message" rows="6"></textarea>
+                        </div>
+                        <div class="block-btn">
+                            <input type="button" class="input-btn" id="input-btn" name="input-btn" value="{{ contact.bouton }}">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<body>
+<div class="container">
+    <div class="tab-container">
+        <div class="div-about">
+            <div class="item-title">
+                <h1 class="title">{{ cgu[0][0].titre }}</h1>
+            </div>
+            <div class="div-contenus">
+                <div *ngFor="let contenu of cgu[1]" class="contenu">
+                    <h2 class="subtitle">{{ contenu.titre }}</h2>
+                    <p class="paragraphe">{{ contenu.contenu }}</p>
+                </div>
+                <div *ngFor="let contenu of cgu[2]" class="contenu">
+                    <h2 class="subtitle">{{ contenu.titre }}</h2>
+                    <p class="paragraphe">{{ contenu.contenu }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

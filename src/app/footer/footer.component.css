@@ -1,0 +1,85 @@
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #071426;
+    padding: 20px 50px;
+    border-top: 4px solid #061221;
+}
+
+.image {
+    height: inherit;
+    width: inherit;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-right: 20px;
+}
+
+.logo {
+    max-height: 200px;
+    height: inherit;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-left: 20px;
+}
+
+.list, .medias {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.condition {
+    display: flex;
+    align-content: center;
+    color: white;
+}
+
+.list {
+    margin-right: 10px;
+}
+
+.list-item {
+    margin-bottom: 10px;
+}
+
+.link-about,
+.link-membres,
+.link-contact,
+.link-actu,
+.link-cgu,
+.link-cgv {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+.separateur {
+    margin: 0 5px;
+}
+
+.title-item {
+    margin-bottom: 10px;
+}
+
+.media-title{
+    font-weight: bold;
+    color: white;
+}
+
+.list-medias {
+    display: flex;
+    justify-content: space-around;
+}
+
+.linkDiscord,
+.linkLinkedin,
+.linkInstagram,
+.linkLinktree {
+    text-decoration: none;
+    color: white;
+}

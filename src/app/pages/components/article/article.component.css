@@ -1,0 +1,64 @@
+.container {
+    justify-content: center;
+    align-content: center;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.block-contenu {
+    background-color: #2A2D63;
+    border: 3px solid white;
+}
+
+.article-title, .article-image,
+.article-corps, .article-information {
+    color: white;
+}
+
+.article-title, .article-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.article-information {
+    display: flex;
+    justify-content: end;
+    align-content: end;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.title {
+    font-size: 40pt;
+}
+
+.article-image {
+    padding: 20px;
+}
+
+.image {
+    max-width: 20%;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.corps {
+    padding: 20px;
+    white-space: pre-line;
+    line-height: 2;
+    justify-content: center;
+    align-content: center;
+}

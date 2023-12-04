@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+    <div class="container">
+        <div class="tab-container">
+            <div class="list-container">
+                <div class="block-adhrents">
+                    <div class="item-title">
+                        <h1 class="title">{{ adherent[0][0].nom }}</h1>
+                    </div>
+                    <div class="list-row">
+                        <div *ngFor="let membre of adherent[1]" class="list">
+                            <div class="list-item">
+                                <div class="adherent">
+                                    <div class="image">
+                                        <img class="imgMembre" src="{{ membre.imgUrl }}" alt="{{ membre.role }}">
+                                    </div>
+                                    <div class="identite">
+                                        <h3 class="idMembre">{{ membre.prenom }} {{ membre.nom }}</h3>
+                                    </div>
+                                    <div class="role">
+                                        <h3 class="roleMembre">{{ membre.role }}</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
