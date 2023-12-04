@@ -8,13 +8,13 @@ import {HttpClient} from "@angular/common/http";
 })
 
 export class AccountService {
-    private readonly apiUrl = `/api/membre`;
+    private readonly apiUrl = `${environment.apiEndpointUrl}/api/membre`;
 
     constructor(private http: HttpClient) {
     }
 
     createAccount(firstName:string,lastName:string,mailUPJV:string,birthDate:string,password:string): Observable<Object> {
-        let rawData:string =
+        let data:JSON = JSON.parse(
             '{ ' +
             '"FirstName": "' + firstName.toString() + '",'+
             '"LastName": "'+ lastName.toString() +'",' +
@@ -24,18 +24,16 @@ export class AccountService {
             '"PpImageUrl": "",' +
             '"Description": "",' +
             '"Password": "'+ password.toString() +'",' +
-            '"Statut": "" }';
-        let data:JSON = JSON.parse(rawData);
-        console.log(`${this.apiUrl}/signup`);
+            '"Statut": "" }');
         return this.http.post(`${this.apiUrl}/signup`,data);
     }
 
     login(mailUPJV:string,password:string): Observable<Object> {
         let data:JSON = JSON.parse(
             '{ ' +
-            '"MailUpjv": '+mailUPJV+',' +
-            '"Password": '+password+'}');
+            '"MailUpjv": "'+mailUPJV+'",' +
+            '"Password": "'+password+'"}');
 
-        return this.http.post(this.apiUrl+"/login",data);
+        return this.http.post(`${this.apiUrl}/login`,data);
     }
 }
