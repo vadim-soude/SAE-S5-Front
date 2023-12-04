@@ -2,11 +2,12 @@ import {Component, ElementRef, ViewChild} from "@angular/core";
 import { CommonModule } from "@angular/common";
 import {AccountService} from "../../../data/services/api/account/account.service";
 import {HttpErrorResponse} from "@angular/common/http";
+import {RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-signup',
     standalone: true,
-    imports: [CommonModule],
+    imports: [CommonModule, RouterLink],
   templateUrl: './signup.component.html',
   styleUrls: ['./signup.component.css']
 })
@@ -18,7 +19,6 @@ export class SignupComponent {
     @ViewChild('birthDate', { static: true }) birthDate: ElementRef | undefined;
     @ViewChild('password', { static: true }) password: ElementRef | undefined;
     @ViewChild('passwordConf', { static: true }) passwordConf: ElementRef | undefined;
-    @ViewChild('err', { static: true }) err: ElementRef | undefined;
 
     constructor(private account: AccountService) { }
 
@@ -30,8 +30,8 @@ export class SignupComponent {
             console.log("error")
             return;
         }
-        this.account.createAccount(this.firstName?.nativeElement.value,this.lastName?.nativeElement.value,this.birthDate?.nativeElement.value,this.mailUPJV?.nativeElement.value,this.password?.nativeElement.value)
-            .subscribe(data => {console.log(data)},(error: HttpErrorResponse)=>{console.log("%cCannot create account", 'color: red')},()=>{console.log("Account created !")});
+        this.account.createAccount(this.firstName?.nativeElement.value,this.lastName?.nativeElement.value,this.mailUPJV?.nativeElement.value,this.birthDate?.nativeElement.value,this.password?.nativeElement.value)
+            .subscribe(() => {},(error: HttpErrorResponse)=>{console.log("%cCannot create account", 'color: red')},()=>{console.log("Account created !")});
 
     }
 
