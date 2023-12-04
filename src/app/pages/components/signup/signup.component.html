@@ -59,7 +59,7 @@
 <body>
 
 <div class="signup-form">
-    <h2>Sign Up</h2>
+    <h2>S'inscrire</h2>
     <form action="#" method="post">
         <label for="lastName">Nom:</label>
         <input type="text" id="lastName" name="lastName" required #lastName>
@@ -81,6 +81,8 @@
         <label #err></label>
 
         <button type="button" (click)="submit()" >S'inscrire</button>
+
+        <a routerLink="/page/login">Se connecter</a>
     </form>
 </div>
 
