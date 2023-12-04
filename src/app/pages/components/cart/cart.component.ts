@@ -1,19 +1,20 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, inject } from "@angular/core";
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { ProductService } from "../../../data/services/product/product.service";
 import { IProductModel } from "../../../data/models/product.model";
 import { IProductsModel } from "../../../data/models/products.model";
 import {CacheService} from "../../../data/services/cache/cache.service";
+import { AuthService } from "../../../data/auth/auth.service";
 
 @Component({
     selector: "app-shop",
     standalone: true,
     imports: [CommonModule, NgOptimizedImage],
-    templateUrl: "./panier.component.html",
-    styleUrls: ["./panier.component.css"]
+    templateUrl: "./cart.component.html",
+    styleUrls: ["./cart.component.css"]
 })
 
-export class PanierComponent implements OnInit {
+export class CartComponent implements OnInit {
 
     products: IProductsModel[] = [];
     isPref: boolean = false;
@@ -22,14 +23,20 @@ export class PanierComponent implements OnInit {
     totalPrice: number = 0;
     totalPricePref: number = 0;
     totalPriceDisplay: number = 0;
+    auth = inject(AuthService);
 
     constructor(private productService: ProductService, private cacheService : CacheService) { }
 
     ngOnInit() {
-        let cachePanier = this.cacheService.get("panier");
+        let cachePanier = this.cacheService.get("cart");
 
         if(cachePanier == null){
             cachePanier = "";
+        }
+
+        if(this.auth.isSubscribe()){
+            this.isPref = true;
+            this.getTotalPrice();
         }
 
         for (let cachePanierElement of cachePanier.split("|")) {
@@ -74,11 +81,12 @@ export class PanierComponent implements OnInit {
                 }
             }
         }
-        this.cacheService.set("panier",tempString);
+        this.cacheService.set("cart",tempString);
         this.getTotalPrice();
     }
 
     getTotalPrice(){
+        console.log(this.isPref)
         this.totalPrice = 0;
         this.totalPricePref = 0;
         for (const products of this.products) {
@@ -111,7 +119,7 @@ export class PanierComponent implements OnInit {
     }
 
     clearProduct():void{
-        this.cacheService.set("panier","");
+        this.cacheService.set("cart","");
         window.location.reload();
     }
 
