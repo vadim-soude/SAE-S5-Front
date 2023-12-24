@@ -11,13 +11,13 @@ import {AccountService} from "../../../data/services/account/account.service";
     styleUrls: ["./account.component.css"]
 })
 export class AccountComponent implements OnInit{
-    account: IAccountModel[][] = [];
+    account: IAccountModel[] = [];
 
     constructor(private accountService: AccountService) { }
 
     ngOnInit () {
         this.accountService.getAccount("profil").subscribe(data => {
-            this.account[0] = data.filter(account => account.id >= 'profil-1');
+            this.account = data;
         });
     }
 }

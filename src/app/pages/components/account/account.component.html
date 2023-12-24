@@ -3,7 +3,7 @@
 <body>
 <div class="container">
     <div class="tab-container">
-        <div *ngFor="let profil of account[0]" class="profil-contenu">
+        <div *ngFor="let profil of account" class="profil-contenu">
             <div class="block-title">
                 <div class="item-title">
                     <h1 class="title">{{ profil.titre }} {{ profil.nomUser }}</h1>
@@ -79,18 +79,6 @@
                                 </div>
                                 <div class="btn-discord">
                                     <input type="submit" name="btn-discord" id="btn-discord" class="btn-profil" value="{{ profil.btnDiscord }}" />
-                                </div>
-                            </div>
-
-                            <div class="block-mdp">
-                                <div class="item-mdp">
-                                    <h2 class="label-mdp">{{ profil.labelMdp }}</h2>
-                                </div>
-                                <div class="champs-mdp">
-                                    <h2 class="discord">{{ profil.mdp }}</h2>
-                                </div>
-                                <div class="btn-mdp">
-                                    <input type="submit" name="btn-mdp" id="btn-mdp" class="btn-profil" value="{{ profil.btnMdp }}" />
                                 </div>
                             </div>
 

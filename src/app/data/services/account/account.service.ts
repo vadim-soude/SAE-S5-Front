@@ -2,6 +2,7 @@ import { Injectable } from "@angular/core";
 import { HttpClient } from "@angular/common/http";
 import { Observable, of } from "rxjs";
 import {IAccountModel} from "../../models/account.model";
+import {CacheService} from "../cache/cache.service";
 
 @Injectable({
     providedIn: "root"
@@ -13,34 +14,29 @@ export class AccountService {
         {
             id: "profil-1",
             titre: "Profil de",
-            nomUser: "Tony Dary",
-            imageUrl: "assets/adherent/tony_dary.png",
+            nomUser: this.cacheService.get("account-firstName") + " " + this.cacheService.get("account-lastName"),
+            imageUrl: this.cacheService.get("account-ppImageUrl"),
             btnImage: "Importer une image",
             labelPrenom: "Prénom : ",
-            prenom: "Tony",
+            prenom: this.cacheService.get("account-firstName"),
             labelNom: "Nom : ",
-            nom: "Dary",
+            nom: this.cacheService.get("account-lastName"),
             labelEmail: "Email : ",
-            email: "tony.dary@etud.u-picardie.fr",
+            email: this.cacheService.get("account-mailUpjv"),
             labelStatut: "Statut : ",
-            statut: "Adhérent",
+            statut: this.cacheService.get("account-statut"),
             labelBirthday: "Date d'anniversaire : ",
-            birthday: "10/05/2003",
+            birthday: this.cacheService.get("account-birthDate"),
             labelDiscord: "Pseudo Discord : ",
-            nameDiscord: "jenyo_hazuka",
+            nameDiscord: this.cacheService.get("account-discordUsername"),
             btnDiscord: "Reset Discord",
-            labelMdp: "Mot de passe : ",
-            mdp: "**********",
-            btnMdp: "Reset MDP",
             labelCommentaire: "Commentaire : ",
-            commentaire: `Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book.
-
-It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged.`,
+            commentaire: this.cacheService.get("account-description"),
             btnCommentaire: "Modifier"
         }
     ]
 
-    constructor(private http: HttpClient) { }
+    constructor(private http: HttpClient, private cacheService : CacheService) { }
 
     getAccountByID(id: string): IAccountModel | null{
 
@@ -55,8 +51,6 @@ It has survived not only five centuries, but also the leap into electronic types
     }
 
     getAccount(category: string): Observable<IAccountModel[]> {
-
-
         return of(this.account);
         //return this.http.get<IAccountModel>(`${this.apiUrl}/${category}/all`);
     }

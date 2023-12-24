@@ -17,9 +17,6 @@ export interface IAccountModel {
     labelDiscord: string;
     nameDiscord: string;
     btnDiscord: string;
-    labelMdp: string;
-    mdp: string;
-    btnMdp: string;
     labelCommentaire: string;
     commentaire: string;
     btnCommentaire: string;
