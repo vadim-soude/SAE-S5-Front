@@ -1,8 +1,11 @@
 export interface IProductModel {
-    guid: string;
-    name: string;
+    idProduit: string;
+    nom: string;
+    description: string;
     imageUrl: string;
-    price: number;
-    pricePref: number;
+    prixAdherent: number;
+    prixNonAdherent: number;
     stock: number;
+    categorie: string;
+    PrixFournisseur: number;
 }

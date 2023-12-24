@@ -11,17 +11,17 @@
                 <div *ngFor="let product of products" class="list-item">
                     <div class="product">
                         <div class="image">
-                            <img class="imageProduct" src="{{product.product.imageUrl}}" alt="{{product.product.name}}">
+                            <img class="imageProduct" src="{{product.product.imageUrl}}" alt="{{product.product.nom}}">
                         </div>
                         <div class="productData">
-                            <div class="productName">{{product.product.name}}</div>
+                            <div class="productName">{{product.product.nom}}</div>
                             <div class="quantityContainer">
-                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, -1)" >-</button>
+                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.idProduit, -1)" >-</button>
                                 <div class="quantity">{{product.quantity}}</div>
-                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, 1)" >+</button>
+                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.idProduit, 1)" >+</button>
                             </div>
                             <div class="quantityContainer">
-                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.guid, - product.quantity)" >Supprimer</button>
+                                <button class="buttonQuantity" (click)="modifyQuantity(product.product.idProduit, - product.quantity)" >Supprimer</button>
                             </div>
                         </div>
 
