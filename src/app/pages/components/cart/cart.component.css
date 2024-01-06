@@ -1,3 +1,7 @@
+.container {
+    padding-bottom: 50px;
+}
+
 .containerList {
     display: flex;
     justify-content: center;

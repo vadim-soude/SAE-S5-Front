@@ -1,19 +1,32 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <style>
-        /* Default link styles */
-        a {
-            color: blue;
-        }
-        b {
-            color: white;
-        }
-    </style>
-</head>
-
 <body>
-    <a>This is a link</a>
-<!--    <b>{{JSON.stringify(datatest)}}</b>-->
+    <div class="container">
+        <div class="tab-container">
+            <div class="div-about">
+                <div class="item-title">
+                    <h1 class="title">{{ about[0][0].titre }}</h1>
+                </div>
+                <div class="div-contenus">
+                    <div *ngFor="let contenu of about[1]" class="contenu">
+                        <h2 class="subtitle">{{ contenu.titre }}</h2>
+                        <p class="paragraphe">{{ contenu.contenus }}</p>
+                    </div>
+                    <div *ngFor="let contenu of about[2]" class="contenu">
+                        <h2 class="subtitle">{{ contenu.titre }}</h2>
+                        <p class="paragraphe">{{ contenu.contenus }}</p>
+                    </div>
+                    <div *ngFor="let contenu of about[3]" class="contenu">
+                        <h2 class="subtitle">{{ contenu.titre }}</h2>
+                        <p class="paragraphe">{{ contenu.contenus }}</p>
+                    </div>
+                    <div *ngFor="let contenu of about[4]" class="contenu">
+                        <h2 class="subtitle">{{ contenu.titre }}</h2>
+                        <p class="paragraphe">{{ contenu.contenus }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
 </body>
 </html>

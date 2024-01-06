@@ -1,0 +1,40 @@
+<!doctype html>
+<html>
+<body>
+    <div class="container">
+        <div class="header-page">
+            <div class="title-page">
+                <h1 class="text-header">{{ contenus[0][0].contenu }}</h1>
+            </div>
+        </div>
+
+        <div class="list-item">
+            <div class="card-list">
+                <div *ngFor="let contenu of contenus[1]" class="card-item">
+                    <div class="header-card">
+                        <img class="image" src="{{ contenu.imageUrl }}" alt="{{ contenu.nomActu }}">
+                    </div>
+
+                    <div class="footer-card">
+                        <div class="title-actu">
+                            <p class="actu-name">{{ contenu.nomActu }}</p>
+                        </div>
+                        <div class="description-actu">
+                            <p class="actu-contenu">{{ contenu.contenu }}</p>
+                        </div>
+                        <div class="info-actu">
+                            <p class="actu-information">
+                                {{ contenu.auteur }}, {{ contenu.date }}
+                            </p>
+                        </div>
+                        <div class="link-actu">
+                            <a class="link" routerLink="../article">{{ contenu.contenuLien }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

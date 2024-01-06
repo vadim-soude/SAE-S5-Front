@@ -1,0 +1,33 @@
+.container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.tab-container {
+    padding: 50px;
+}
+
+.div-about {
+    justify-content: center;
+    align-content: center;
+    color: white;
+    background-color: #2A2D63;
+    border: 3px solid white;
+    padding: 20px;
+}
+
+.paragraphe {
+    max-width: 70rem;
+    font-size: 1.2rem;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.contenu {
+    padding-top: 20px;
+}

@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<div class="container">
+    <div class="tab-container">
+        <div *ngFor="let article of article[0]" class="block-article">
+            <div class="block-contenu">
+                <div class="article-title">
+                    <h1 class="title">{{ article.nom }}</h1>
+                </div>
+                <div class="article-image">
+                    <img class="image" src="{{ article.imageUrl }}" alt="{{ article.nom }}">
+                </div>
+                <div class="article-corps">
+                    <h2 class="corps">{{ article.corps }}</h2>
+                </div>
+                <div class="article-information">
+                    <h2 class="information">{{ article.auteur }} le {{ article.dateModif }}</h2>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

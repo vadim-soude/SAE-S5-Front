@@ -58,6 +58,7 @@
 .list-title {
     font-weight: bold; /* Set the font weight to regular */
     font-size: 20pt;
+    text-transform: uppercase;
     font-family: "Inter",fantasy;
 }
 
@@ -79,7 +80,7 @@
 }
 
 .list {
-    width: max-content;
+    width: 100%;
     display: flex;
     list-style: none;
     align-items: center;
@@ -87,7 +88,7 @@
 
 .image {
     max-height: inherit;
-    width: auto;
+    width: fit-content;
     display: block;
     margin: 0 auto;
 }
@@ -97,6 +98,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    width: fit-content;
     max-height: 30vh;
     max-width: 40vh;
     border-radius: 15px; /* Add rounded corners to the div */
@@ -110,6 +112,7 @@
     right: 35px;
     display: flex;
     flex-direction: column;
+    align-items: center;
 }
 
 .list-arrow {

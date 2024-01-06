@@ -12,14 +12,37 @@
     <div class = "tab-container">
         <div class="list-container">
             <div class="list">
-                <div class="list-item">
-                    <a [ngClass]="{'bold-text': currentPage === ''}" routerLink="/">INFO CONTACT</a>
+                <div class="dropdown">
+                    <div class="list-item">
+                        <a [ngClass]="{'bold-text': currentPage === ''}" routerLink="/">INFO CONTACT</a>
+                        <div class="dropdown-content">
+                            <a [ngClass]="{'bold-text': currentPage === 'membresBureau'}" routerLink="/page/membresBureau">
+                                Membres du bureau
+                            </a>
+                            <a [ngClass]="{'bold-text': currentPage === 'adherents'}" routerLink="/page/adherents">
+                                Nos adhérents
+                            </a>
+                            <a [ngClass]="{'bold-text': currentPage === 'about'}" routerLink="/page/about">
+                                Qui sommes-nous ?
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="list-item">
                     <a [ngClass]="{'bold-text': currentPage === 'projects'}" routerLink="/page/projects" >NOS PROJETS</a>
                 </div>
-                <div class="list-item">
-                    <a [ngClass]="{'bold-text': currentPage === 'about'}" routerLink="/page/about">ACTUALITES</a>
+                <div class="dropdown">
+                    <div class="list-item">
+                        <a [ngClass]="{'bold-text': currentPage === 'actualites'}" routerLink="/page/actualites">ACTUALITES</a>
+                        <div class="dropdown-content">
+                            <a [ngClass]="{'bold-text': currentPage === 'edt'}" routerLink="/page/edt">
+                                Emploi du temps
+                            </a>
+                            <a [ngClass]="{'bold-text': currentPage === 'contact'}" routerLink="/page/contact">
+                                Nous contacter
+                            </a>
+                        </div>
+                    </div>
                 </div>
                 <div class="list-item">
                     <a [ngClass]="{'bold-text': currentPage === 'shop'}" routerLink="/page/shop">BOUTIQUE</a>
@@ -34,9 +57,22 @@
             </svg>
         </div>
         <div class="image">
-            <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentColor" [ngClass]="{'bold-text': currentPage === 'account'}" routerLink="/page/account">
-                <path d="M2.5 30C2.5 30 0 30 0 27.5C0 25 2.5 17.5 15 17.5C27.5 17.5 30 25 30 27.5C30 30 27.5 30 27.5 30H2.5ZM15 15C16.9891 15 18.8968 14.2098 20.3033 12.8033C21.7098 11.3968 22.5 9.48912 22.5 7.5C22.5 5.51088 21.7098 3.60322 20.3033 2.1967C18.8968 0.790177 16.9891 0 15 0C13.0109 0 11.1032 0.790177 9.6967 2.1967C8.29018 3.60322 7.5 5.51088 7.5 7.5C7.5 9.48912 8.29018 11.3968 9.6967 12.8033C11.1032 14.2098 13.0109 15 15 15Z" fill="currentColor"/>
-            </svg>
+            <div class="dropdown">
+                <svg class="svg" xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 30 30" fill="currentColor" [ngClass]="{'bold-text': currentPage === 'account'}" routerLink="/page/account">
+                    <path d="M2.5 30C2.5 30 0 30 0 27.5C0 25 2.5 17.5 15 17.5C27.5 17.5 30 25 30 27.5C30 30 27.5 30 27.5 30H2.5ZM15 15C16.9891 15 18.8968 14.2098 20.3033 12.8033C21.7098 11.3968 22.5 9.48912 22.5 7.5C22.5 5.51088 21.7098 3.60322 20.3033 2.1967C18.8968 0.790177 16.9891 0 15 0C13.0109 0 11.1032 0.790177 9.6967 2.1967C8.29018 3.60322 7.5 5.51088 7.5 7.5C7.5 9.48912 8.29018 11.3968 9.6967 12.8033C11.1032 14.2098 13.0109 15 15 15Z" fill="currentColor"/>
+                </svg>
+                <div class="dropdown-content">
+                    <a [ngClass]="{'bold-text': currentPage === 'profil'}" routerLink="/page/account">
+                        Mon profil
+                    </a>
+                    <a [ngClass]="{'bold-text': currentPage === 'historique'}" routerLink="/page/historique">
+                        Historique d'achat
+                    </a>
+                    <a routerLink="/page/logout">
+                        Se déconnecter
+                    </a>
+                </div>
+            </div>
         </div>
     </div>
 </div>

@@ -1,0 +1,81 @@
+.container {
+    justify-content: center;
+    align-content: center;
+}
+
+.tab-container {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+
+.block-contenu {
+    background-color: #2A2D63;
+    border: 3px solid white;
+}
+
+.event-title, .event-image,
+.event-corps, .event-date,
+.event-lieu, .event-condition,
+.event-inscription, .event-information {
+    color: white;
+}
+
+.event-title, .event-image {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.event-inscription a {
+    color: #FF0000;
+}
+
+.event-information {
+    display: flex;
+    justify-content: end;
+    align-content: end;
+    padding-right: 20px;
+    padding-bottom: 20px;
+}
+
+.event-date, .event-information {
+    padding-top: 20px;
+}
+
+.event-date, .event-lieu,
+.event-condition, .event-inscription {
+    display: flex;
+    justify-content: start;
+    align-content: start;
+    padding-left: 20px;
+}
+
+.title {
+    font-size: 40pt;
+}
+
+.event-image {
+    padding: 20px;
+}
+
+.image {
+    max-width: 20%;
+    overflow: hidden;
+}
+
+.image img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.corps {
+    padding: 20px;
+    white-space: pre-line;
+    line-height: 2;
+    justify-content: center;
+    align-content: center;
+}

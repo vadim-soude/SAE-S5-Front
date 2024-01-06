@@ -1,8 +1,8 @@
-import {Component, ElementRef, ViewChild} from "@angular/core";
+import {Component, ElementRef, inject, ViewChild} from "@angular/core";
 import { CommonModule } from "@angular/common";
 import {AccountService} from "../../../data/services/api/account/account.service";
 import {HttpErrorResponse} from "@angular/common/http";
-import {RouterLink} from "@angular/router";
+import {Router, RouterLink} from "@angular/router";
 
 @Component({
   selector: 'app-signup',
@@ -12,6 +12,8 @@ import {RouterLink} from "@angular/router";
   styleUrls: ['./signup.component.css']
 })
 export class SignupComponent {
+
+    router = inject(Router);
 
     @ViewChild('lastName', { static: true }) lastName: ElementRef | undefined;
     @ViewChild('firstName', { static: true }) firstName: ElementRef | undefined;
@@ -31,8 +33,13 @@ export class SignupComponent {
             return;
         }
         this.account.createAccount(this.firstName?.nativeElement.value,this.lastName?.nativeElement.value,this.mailUPJV?.nativeElement.value,this.birthDate?.nativeElement.value,this.password?.nativeElement.value)
-            .subscribe(() => {},(error: HttpErrorResponse)=>{console.log("%cCannot create account", 'color: red')},()=>{console.log("Account created !")});
+            .subscribe(() => {},(error: HttpErrorResponse)=>{console.log("%cCannot create account", 'color: red')},()=>{});
 
+    }
+
+    onAccountCreated():void{
+        console.log("Account created !")
+        this.router.navigateByUrl('/page/login')
     }
 
 }

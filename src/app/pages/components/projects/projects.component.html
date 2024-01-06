@@ -1,1 +1,41 @@
-<p>projects works!</p>
+<!doctype html>
+<html>
+<body>
+    <div class="container">
+
+        <div class="header-page">
+            <div class="title-page">
+                <h1 class="text-header">{{ contenus[0][0].contenu }}</h1>
+            </div>
+        </div>
+
+        <div class="list-item">
+            <div class="card-list">
+                <div *ngFor="let contenu of contenus[1]" class="card-item">
+                    <div class="header-card">
+                        <img class="image" src="{{ contenu.imageUrl }}" alt="{{ contenu.nomEvent }}">
+                    </div>
+
+                    <div class="footer-card">
+                        <div class="title-event">
+                            <p class="event-name">{{ contenu.nomEvent }}</p>
+                        </div>
+                        <div class="description-event">
+                            <p class="event-contenu">{{ contenu.contenu }}</p>
+                        </div>
+                        <div class="info-event">
+                            <p class="event-information">
+                                {{ contenu.auteur }}, {{ contenu.date }}, {{ contenu.lieu }}
+                            </p>
+                        </div>
+                        <div class="link-event">
+                            <a class="link" routerLink="../event" >{{ contenu.contenuLien }}</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</body>
+</html>

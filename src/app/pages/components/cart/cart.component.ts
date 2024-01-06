@@ -75,9 +75,9 @@ export class CartComponent implements OnInit {
         for (const product of products) {
             for (let i = 0; i < product.quantity; i++) {
                 if(tempString == ""){
-                    tempString = product.product.guid;
+                    tempString = product.product.idProduit;
                 }else{
-                    tempString = tempString + "|" + product.product.guid;
+                    tempString = tempString + "|" + product.product.idProduit;
                 }
             }
         }
@@ -90,8 +90,8 @@ export class CartComponent implements OnInit {
         this.totalPrice = 0;
         this.totalPricePref = 0;
         for (const products of this.products) {
-            this.totalPrice = this.totalPrice + (products.quantity * products.product.price);
-            this.totalPricePref = this.totalPricePref + (products.quantity * products.product.pricePref);
+            this.totalPrice = this.totalPrice + (products.quantity * products.product.prixAdherent);
+            this.totalPricePref = this.totalPricePref + (products.quantity * products.product.prixAdherent);
         }
         if(this.isPref){
             this.totalPriceDisplay = this.totalPricePref
@@ -124,7 +124,7 @@ export class CartComponent implements OnInit {
     }
 
     getProductIndex(productGUID: string) : number | null{
-        let prod = this.products.find((element) => element.product.guid == productGUID)
+        let prod = this.products.find((element) => element.product.idProduit == productGUID)
         let index = -1;
         if (prod) {
             index = this.products.indexOf(prod);
@@ -137,15 +137,15 @@ export class CartComponent implements OnInit {
     }
 
     getProductPrice(product: IProductModel, isPref: boolean): number {
-        let index = this.getProductIndex(product.guid)
+        let index = this.getProductIndex(product.idProduit)
         let quantity = 0;
         if(index != null){
             quantity = this.products[index].quantity
         }
         if(isPref){
-            return product.pricePref * quantity;
+            return product.prixAdherent * quantity;
         }else{
-            return product.price * quantity;
+            return product.prixAdherent * quantity;
         }
     }
 
