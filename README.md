@@ -17,3 +17,22 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 ## Further help
 
 To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+
+# How to deploy ?
+
+## With docker
+
+- Create a dir named "angular"
+- Clone all the git in this dir
+- In the parent dir create a docker-compose.yml with the following content
+version: "2"
+```
+services:
+  frontend:
+    build: ./angular/
+    ports:
+      - 8282:80
+```
+- run in the parent dir : `docker-compose up -d --build`
+- Wait
+- Enjoy the website on the 8282 port (you can change this in the docker-compose.yml file)
