@@ -9,9 +9,23 @@
     padding: 50px;
 }
 
+h1, h3 {
+    font-family: "Inter", fantasy;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+h3 {
+    font-size: 13pt ;
+}
+
 .box-bureau {
     background-color: #2a2d63;
     border: 3px solid white;
+    border-radius: 10px;
 }
 
 .block-presidence, .block-tresorie,

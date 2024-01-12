@@ -14,6 +14,46 @@
     padding: 40px;
     background-color: #2A2D63;
     border: 2px solid white;
+    border-radius: 10px;
+}
+
+h1, label, input, textarea {
+    font-family: "Inter", fantasy;
+}
+
+h1 {
+    font-size: 20pt;
+}
+
+label {
+    display: block;
+    padding-bottom: 5px;
+    font-size: 15pt;
+}
+
+input {
+    text-align: center;
+}
+
+input,
+textarea {
+    display: block;
+    width: 100%;
+    border-radius: 10px;
+    border: 3px solid black;
+}
+
+.block-name input,
+.block-prenom input,
+.block-email input {
+    height: 20pt;
+    font-size: 15pt;
+}
+
+.title {
+    display: flex;
+    justify-content: center;
+    align-content: center;
 }
 
 .form-title,
@@ -45,17 +85,11 @@
     margin-bottom: 20px;
 }
 
-label {
-    display: block;
-    padding-bottom: 5px;
-    font-size: 1.3em;
-}
-
 .block-message textarea {
     height: 150pt;
     width: 300pt;
     border-radius: 10px;
-    font-size: large;
+    font-size: 15pt;
 }
 
 .block-btn input {
@@ -71,30 +105,4 @@ label {
 .block-btn input:hover {
     background-color: #555;
     color: white;
-}
-
-input {
-    text-align: center;
-}
-
-input,
-textarea {
-    display: block;
-    width: 100%;
-    border-radius: 10px;
-    border: 3px solid black;
-}
-
-.block-name input,
-.block-prenom input,
-.block-email input {
-    height: 20pt;
-    font-size: large;
-}
-
-.title {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-    font-size: 2.5em;
 }

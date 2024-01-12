@@ -12,6 +12,22 @@ body {
     padding: 50px;
 }
 
+h1, h2, p {
+    font-family: "Inter", fantasy;
+}
+
+h1 {
+    text-transform: uppercase;
+}
+
+h1, h2 {
+    font-size: 20pt;
+}
+
+p {
+    font-size: 17pt;
+}
+
 .div-about {
     justify-content: center;
     align-content: center;
@@ -19,6 +35,7 @@ body {
     background-color: #2A2D63;
     border: 3px solid white;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .paragraphe {
