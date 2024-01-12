@@ -4,7 +4,8 @@
     justify-content: space-between;
     background-color: #071426;
     padding: 20px 50px;
-    border-top: 4px solid #061221;
+    font-size: 10pt;
+    font-family: "Inter",fantasy;
 }
 
 .image {
@@ -17,7 +18,7 @@
 }
 
 .logo {
-    max-height: 200px;
+    max-height: 100px;
     height: inherit;
     width: auto;
     display: flex;
@@ -26,7 +27,14 @@
     padding-left: 20px;
 }
 
+.column{
+    display: flex;
+    flex-direction: row;
+}
+
 .list, .medias {
+    padding-right: 35px;
+    padding-left: 35px;
     display: flex;
     justify-content: center;
     flex-direction: column;
@@ -38,9 +46,6 @@
     color: white;
 }
 
-.list {
-    margin-right: 10px;
-}
 
 .list-item {
     margin-bottom: 10px;
@@ -54,8 +59,7 @@
 .link-cgv {
     text-decoration: none;
     color: white;
-    font-weight: bold;
-    font-size: 1.2rem;
+    font-size: 10pt;
 }
 
 .separateur {
