@@ -13,11 +13,7 @@ export class HomeService {
         {
             id: "contenu-1",
             nom: "Présentation du BDE Info Contact",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                "Ut porttitor elit et massa sodales, eu porttitor erat tincidunt. " +
-                "Quisque sit amet tellus rhoncus, euismod justo a, lacinia purus. " +
-                "Aliquam at maximus mauris. Aenean consequat dapibus dictum. Pellentesque augue urna, " +
-                "iaculis cursus convallis at, condimentum eget velit.",
+            content: "L'association Info Contact, rassemble les étudiants en informatique pour organiser diverses activités, telles que des soirées et événements en tout genre. Ces initiatives renforcent les liens entre les étudiants, favorisent l'échange de connaissances et améliorent la vie étudiante, contribuant ainsi à un impact social positif au sein de la communauté universitaire.",
             nomPartenaire: "",
             imageURL: ""
         },

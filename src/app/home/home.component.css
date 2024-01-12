@@ -5,7 +5,6 @@ body {
 .container {
     justify-content: center;
     align-items: center;
-    background: #09182D;
     color: #B4B6BA;
 }
 
@@ -14,7 +13,23 @@ body {
     padding-bottom: 40px;
     justify-content: center;
     align-items: center;
-    border-bottom: 1px solid #000000;
+}
+
+.black-bar-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+
+}
+
+.bar {
+    width: 40%; /* Set the width to 100% to make it span the entire container */
+    height: 1px; /* Set the height of the bar */
+    background-color: #B4B6BA; /* Black background color for the bar */
+
 }
 
 h1, h2, p {
@@ -111,6 +126,3 @@ h2 {
     color: #ffffff;
 }
 
-.bg-valeur {
-    background-color: #2A2D63;
-}
