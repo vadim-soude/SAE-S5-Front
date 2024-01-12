@@ -11,9 +11,23 @@
     padding-bottom: 20px;
 }
 
+h1, h2 {
+    font-family: "Inter", fantasy;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+h2 {
+    font-size: 17pt;
+}
+
 .block-contenu {
     background-color: #2A2D63;
     border: 3px solid white;
+    border-radius: 10px;
 }
 
 .article-title, .article-image,
@@ -42,6 +56,9 @@
 
 .article-image {
     padding: 20px;
+    background-color: #09182D;
+    background-clip: content-box;
+    border-radius: 50px;
 }
 
 .image {
@@ -59,6 +76,4 @@
     padding: 20px;
     white-space: pre-line;
     line-height: 2;
-    justify-content: center;
-    align-content: center;
 }

@@ -7,6 +7,11 @@
     border-top: 4px solid #061221;
 }
 
+a, h3, p {
+    font-family: "Inter", fantasy;
+    font-size: 13pt;
+}
+
 .image {
     height: inherit;
     width: inherit;
@@ -55,7 +60,6 @@
     text-decoration: none;
     color: white;
     font-weight: bold;
-    font-size: 1.2rem;
 }
 
 .separateur {
