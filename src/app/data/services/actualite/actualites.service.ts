@@ -22,43 +22,43 @@ export class ActualitesService {
         },
         {
             id: "actu-1",
-            nomActu: "Semaine 47 V2",
-            date: "23/11/2023",
+            nomActu: "Semaine 3 V3",
+            date: "12/01/2024",
             imageUrl: "assets/actualite/calendar.png",
             auteur: "IUT Amiens",
-            contenu: "Emploi du temps de la semaine 47 version 2",
+            contenu: "Emploi du temps de la semaine du 15/01 au 20/01 version 3",
             lien: "./edt-xx.html",
-            contenuLien: "Plus d'information ici"
+            contenuLien: "Télécharger ici"
         },
         {
             id: "actu-2",
-            nomActu: "Semaine 48 V2",
-            date: "23/11/2023",
+            nomActu: "Semaine 2 V3",
+            date: "08/01/2024",
             imageUrl: "assets/actualite/calendar.png",
             auteur: "IUT Amiens",
-            contenu: "Emploi du temps de la semaine 48 version 2",
+            contenu: "Emploi du temps de la semaine du 08/01 au 13/01 version 3",
             lien: "./edt-xx.html",
-            contenuLien: "Plus d'information ici"
+            contenuLien: "Télécharger ici"
         },
         {
             id: "actu-3",
-            nomActu: "Semaine 49 V2",
-            date: "23/11/2023",
+            nomActu: "Semaine 51 V5",
+            date: "28/12/2023",
             imageUrl: "assets/actualite/calendar.png",
             auteur: "IUT Amiens",
-            contenu: "Emploi du temps de la semaine 49 version 2",
+            contenu: "Emploi du temps de la semaine du 18/12 au 23/12 version 5",
             lien: "./edt-xx.html",
-            contenuLien: "Plus d'information ici"
+            contenuLien: "Télécharger ici"
         },
         {
             id: "actu-4",
-            nomActu: "Semaine 50 V2",
-            date: "23/11/2023",
+            nomActu: "Semaine 50 V4",
+            date: "10/12/2023",
             imageUrl: "assets/actualite/calendar.png",
             auteur: "IUT Amiens",
-            contenu: "Emploi du temps de la semaine 50 version 2",
+            contenu: "Emploi du temps de la semaine du 11/12 au 16/12  version 4",
             lien: "./edt-xx.html",
-            contenuLien: "Plus d'information ici"
+            contenuLien: "Télécharger ici"
         }
     ]
 

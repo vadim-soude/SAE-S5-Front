@@ -8,12 +8,12 @@ export const routes: Routes = [
     {
         path: 'page/cart',
         component: CartComponent,
-        canActivate: [AuthGuard], // Utilisation du guard
+        //canActivate: [AuthGuard], // Utilisation du guard
     },
     {
         path: 'page/account',
         component: AccountComponent,
-        canActivate: [AuthGuard], // Utilisation du guard
+        //canActivate: [AuthGuard], // Utilisation du guard
     },
 	{
 		path: "",
