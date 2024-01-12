@@ -138,7 +138,7 @@ h1, h2 {
     padding-top: 20px;
     font-size: 5pt;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
 }
 
 input {

@@ -1,12 +1,29 @@
 .container {
     justify-content: center;
     align-content: center;
+    font-family: "Inter",fantasy;
+}
+
+
+.black-bar-container {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: auto;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+
+}
+
+.bar {
+    width: 40%; /* Set the width to 100% to make it span the entire container */
+    height: 1px; /* Set the height of the bar */
+    background-color: #B4B6BA; /* Black background color for the bar */
+
 }
 
 .header-page {
-    background-color: #2A2D63;
     padding-top: 40px;
-    padding-bottom: 40px;
 }
 
 h1, p, a {
@@ -41,7 +58,6 @@ p, a{
     justify-content: space-evenly;
     align-content: center;
     flex-wrap: wrap;
-    padding: 50px;
 }
 
 .card-item {

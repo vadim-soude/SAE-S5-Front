@@ -49,8 +49,8 @@ h2 {
 
 .event-information {
     display: flex;
-    justify-content: end;
-    align-content: end;
+    justify-content: flex-end;
+    align-content: flex-end;
     padding-right: 20px;
     padding-bottom: 20px;
 }
@@ -62,8 +62,8 @@ h2 {
 .event-date, .event-lieu,
 .event-condition, .event-inscription {
     display: flex;
-    justify-content: start;
-    align-content: start;
+    justify-content: flex-start;
+    align-content: flex-start;
     padding-left: 20px;
 }
 
