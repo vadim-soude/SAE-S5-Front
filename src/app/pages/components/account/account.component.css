@@ -13,6 +13,7 @@
     border: 3px solid white;
     padding: 20px;
     color: white;
+    border-radius: 20px;
 }
 
 .block-title {
@@ -23,10 +24,13 @@
     padding-bottom: 20px;
 }
 
+h1, h2 {
+    font-family: "Inter", fantasy;
+    text-transform: uppercase;
+}
+
 .block-contenu-up {
     display: flex;
-    align-items: flex-start;
-    justify-content: space-around;
     width: 100%;
     padding-bottom: 20px;
 }
@@ -52,6 +56,7 @@
 .item-statut h2 {
     margin: 0;
     width: 120px;
+    padding: 20px;
 }
 
 .champs-prenom,
@@ -63,10 +68,9 @@
 
 .block-image {
     display: block;
-    justify-content: center;
-    align-content: center;
     width: 25%;
     padding-top: 20px;
+    padding-left: 20px;
 }
 
 .item-image {
@@ -84,6 +88,10 @@
 
 .btn-image {
     padding-top: 20px;
+}
+
+.btn-image input {
+    margin: 0 45px;
 }
 
 .block-contenu-bottom {
@@ -113,7 +121,6 @@
 
 .block-commentaire {
     display: block;
-    align-items: center;
     padding-left: 20px;
     padding-right: 20px;
 }
@@ -123,6 +130,8 @@
     resize: none;
     overflow-y: hidden;
     font-size: large;
+    font-family: "Inter", fantasy;
+    border-radius: 10px;
 }
 
 .btn-commentaire {
@@ -134,4 +143,7 @@
 
 input {
     border-radius: 10px;
+    font-family: "Inter", fantasy;
+    font-size: medium;
+    text-transform: uppercase;
 }
