@@ -8,6 +8,19 @@
     padding: 50px;
 }
 
+h1, h2, p {
+    font-family: "Inter", fantasy;
+}
+
+h1, h2 {
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+p {
+    font-size: 17pt;
+}
+
 .div-about {
     justify-content: center;
     align-content: center;
@@ -15,11 +28,11 @@
     background-color: #2A2D63;
     border: 3px solid white;
     padding: 20px;
+    border-radius: 10px;
 }
 
 .paragraphe {
     max-width: 70rem;
-    font-size: 1.2rem;
 }
 
 .title {

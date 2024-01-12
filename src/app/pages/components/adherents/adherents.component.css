@@ -10,6 +10,20 @@
     flex-direction: column;
     align-items: center;
     margin: 50px;
+    border-radius: 10px;
+}
+
+h1, h3 {
+    font-family: "Inter", fantasy;
+}
+
+h1 {
+    text-transform: uppercase;
+    font-size: 20pt;
+}
+
+h3 {
+    font-size: 13pt;
 }
 
 .block-adherent {

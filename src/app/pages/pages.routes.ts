@@ -41,33 +41,33 @@ export default [
                 path: "membresBureau",
                 loadComponent: () => import("./components/membresBureau/membresBureau.component").then(module => module.MembresBureauComponent)
             },
-            // {
-            //     path: "adherents",
-            //     loadComponent: () => import("./components/adherents/adherents.component").then(module => module.AdherentsComponent)
-            // },
+            {
+                path: "adherents",
+                loadComponent: () => import("./components/adherents/adherents.component").then(module => module.AdherentsComponent)
+            },
             {
                 path: "event",
                 loadComponent: () => import("./components/event/event.component").then(module => module.EventComponent)
+            },
+            {
+                path: "article",
+                loadComponent: () => import("./components/article/article.component").then(module => module.ArticleComponent)
+            },
+            {
+                path: "contact",
+                loadComponent: () => import("./components/contact/contact.component").then(module => module.ContactComponent)
+            },
+            {
+                path: "cgu",
+                loadComponent: () => import("./components/cgu/cgu.component").then(module => module.CguComponent)
+            },
+            {
+                path: "cgv",
+                loadComponent: () => import("./components/cgv/cgv.component").then(module => module.CgvComponent)
             //},
-            // {
-            //     path: "article",
-            //     loadComponent: () => import("./components/article/article.component").then(module => module.ArticleComponent)
-            // },
-            // {
-            //     path: "contact",
-            //     loadComponent: () => import("./components/contact/contact.component").then(module => module.ContactComponent)
-            // },
-            // {
-            //     path: "cgu",
-            //     loadComponent: () => import("./components/cgu/cgu.component").then(module => module.CguComponent)
-            // },
-            // {
-            //     path: "cgv",
-            //     loadComponent: () => import("./components/cgv/cgv.component").then(module => module.CgvComponent)
-            // },
-            // {
-            //     path: "historique",
-            //     loadComponent: () => import("./components/historique/historique.component").then(module => module.HistoriqueComponent)
+            //{
+            //    path: "historique",
+            //    loadComponent: () => import("./components/historique/historique.component").then(module => module.HistoriqueComponent)
             }
         ]
     }
