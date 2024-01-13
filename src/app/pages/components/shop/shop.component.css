@@ -76,7 +76,6 @@
     width: 30%; /* Set the width to 100% to make it span the entire container */
     height: 1px; /* Set the height of the bar */
     background-color: #B4B6BA; /* Black background color for the bar */
-
 }
 
 .list {
@@ -94,7 +93,7 @@
 }
 
 .image-container {
-    background-color: #2A2D63; /* Background color for the div */
+    background-color: #102b52; /* Background color for the div */
     display: flex;
     justify-content: center;
     align-items: center;

@@ -8,6 +8,7 @@
     font-family: "Inter",fantasy;
 }
 
+
 .image {
     height: inherit;
     width: inherit;
@@ -18,7 +19,7 @@
 }
 
 .logo {
-    max-height: 100px;
+    max-height: 75px;
     height: inherit;
     width: auto;
     display: flex;

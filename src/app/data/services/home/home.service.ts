@@ -18,17 +18,6 @@ export class HomeService {
             imageURL: ""
         },
         {
-            id: "contenu-2",
-            nom: "Nos valeurs et objectifs",
-            content: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. " +
-                "Ut porttitor elit et massa sodales, eu porttitor erat tincidunt. " +
-                "Quisque sit amet tellus rhoncus, euismod justo a, lacinia purus. " +
-                "Aliquam at maximus mauris. Aenean consequat dapibus dictum. Pellentesque augue urna, " +
-                "iaculis cursus convallis at, condimentum eget velit.",
-            nomPartenaire: "",
-            imageURL: ""
-        },
-        {
             id: "contenu-3",
             nom: "Nos partenaires",
             content: "",

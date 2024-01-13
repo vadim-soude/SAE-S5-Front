@@ -2,7 +2,8 @@
     height: 10vh;
     background-color: #071426; /* Header background color */
     color: #B4B6BA;
-    padding: 10px; /* Padding around the header content */
+    padding: 20px 50px;
+    font-size: 10pt;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -83,8 +84,9 @@ a{
 .dropdown-content {
     display: none;
     position: absolute;
-    background-color: #2A2D63;
+    background-color: #102b52;
     box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 15px; /* Add rounded corners to the div */
     z-index: 1;
     right: 0;
 }
@@ -95,9 +97,26 @@ a{
     padding: 12px 16px;
     text-decoration: none;
     color: white;
-    font-size: 13pt;
+    font-size: 10pt;
 }
 
 .dropdown:hover .dropdown-content {
     display: block;
 }
+
+.black-bar-container {
+    padding-top: 1px;
+    padding-bottom: 1px;
+    width: auto;
+    display: flex;
+    justify-content: center; /* Center the content horizontally */
+    align-items: center; /* Center the content vertically */
+
+}
+
+.bar {
+    width: 50%; /* Set the width to 100% to make it span the entire container */
+    height: 1px; /* Set the height of the bar */
+    background-color: #B4B6BA; /* Black background color for the bar */
+}
+

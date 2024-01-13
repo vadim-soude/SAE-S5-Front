@@ -1,6 +1,9 @@
 .container {
     padding-bottom: 50px;
 }
+.card{
+    width: 100%;
+}
 
 .containerList {
     display: flex;
@@ -43,6 +46,8 @@
     font-size: 13pt;
     font-family: "Inter",fantasy;
 }
+
+
 
 .containerInfo{
     display: flex;

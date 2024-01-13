@@ -1,15 +1,20 @@
 import { Component, OnInit, inject } from "@angular/core";
+import { ToastModule } from 'primeng/toast';
+import { MessageService } from 'primeng/api';
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { ProductService } from "../../../data/services/product/product.service";
 import { IProductModel } from "../../../data/models/product.model";
 import { IProductsModel } from "../../../data/models/products.model";
 import {CacheService} from "../../../data/services/cache/cache.service";
 import { AuthService } from "../../../data/auth/auth.service";
+import {ButtonModule} from "primeng/button";
+import {RippleModule} from "primeng/ripple";
 
 @Component({
     selector: "app-shop",
     standalone: true,
-    imports: [CommonModule, NgOptimizedImage],
+    imports: [CommonModule, NgOptimizedImage, ToastModule, ButtonModule, RippleModule],
+    providers: [MessageService],
     templateUrl: "./cart.component.html",
     styleUrls: ["./cart.component.css"]
 })
@@ -25,7 +30,11 @@ export class CartComponent implements OnInit {
     totalPriceDisplay: number = 0;
     auth = inject(AuthService);
 
-    constructor(private productService: ProductService, private cacheService : CacheService) { }
+    constructor(private productService: ProductService, private cacheService : CacheService, private messageService: MessageService) { }
+
+    show() {
+        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
+    }
 
     ngOnInit() {
         let cachePanier = this.cacheService.get("cart");

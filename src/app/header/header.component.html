@@ -19,9 +19,15 @@
                             <a [ngClass]="{'bold-text': currentPage === 'membresBureau'}" routerLink="/page/membresBureau">
                                 Membres du bureau
                             </a>
+                            <div class="black-bar-container">
+                                <div class="bar"> </div>
+                            </div>
                             <a [ngClass]="{'bold-text': currentPage === 'adherents'}" routerLink="/page/adherents">
                                 Nos adhérents
                             </a>
+                            <div class="black-bar-container">
+                                <div class="bar"> </div>
+                            </div>
                             <a [ngClass]="{'bold-text': currentPage === 'about'}" routerLink="/page/about">
                                 Qui sommes-nous ?
                             </a>
@@ -65,9 +71,9 @@
                     <a [ngClass]="{'bold-text': currentPage === 'profil'}" routerLink="/page/account">
                         Mon profil
                     </a>
-                    <!--<a [ngClass]="{'bold-text': currentPage === 'historique'}" routerLink="/page/historique">
-                        Historique d'achat
-                    </a>-->
+                    <div class="black-bar-container">
+                        <div class="bar"> </div>
+                    </div>
                     <a routerLink="/page/logout">
                         Se déconnecter
                     </a>
