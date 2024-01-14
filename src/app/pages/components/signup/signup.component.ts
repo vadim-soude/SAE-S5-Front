@@ -32,9 +32,9 @@ export class SignupComponent {
             console.log("error")
             return;
         }
-        this.account.createAccount(this.firstName?.nativeElement.value,this.lastName?.nativeElement.value,this.mailUPJV?.nativeElement.value,this.birthDate?.nativeElement.value,this.password?.nativeElement.value)
-            .subscribe(() => {},(error: HttpErrorResponse)=>{console.log("%cCannot create account", 'color: red')},()=>{});
-
+        // this.account.createAccount(this.firstName?.nativeElement.value,this.lastName?.nativeElement.value,this.mailUPJV?.nativeElement.value,this.birthDate?.nativeElement.value,this.password?.nativeElement.value)
+        //     .subscribe(() => {},(error: HttpErrorResponse)=>{console.log("%cCannot create account", 'color: red')},()=>{});
+        this.onAccountCreated();
     }
 
     onAccountCreated():void{

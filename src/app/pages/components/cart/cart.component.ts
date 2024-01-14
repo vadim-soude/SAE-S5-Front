@@ -1,20 +1,15 @@
 import { Component, OnInit, inject } from "@angular/core";
-import { ToastModule } from 'primeng/toast';
-import { MessageService } from 'primeng/api';
 import { CommonModule, NgOptimizedImage } from "@angular/common";
 import { ProductService } from "../../../data/services/product/product.service";
 import { IProductModel } from "../../../data/models/product.model";
 import { IProductsModel } from "../../../data/models/products.model";
 import {CacheService} from "../../../data/services/cache/cache.service";
 import { AuthService } from "../../../data/auth/auth.service";
-import {ButtonModule} from "primeng/button";
-import {RippleModule} from "primeng/ripple";
 
 @Component({
     selector: "app-shop",
     standalone: true,
-    imports: [CommonModule, NgOptimizedImage, ToastModule, ButtonModule, RippleModule],
-    providers: [MessageService],
+    imports: [CommonModule, NgOptimizedImage],
     templateUrl: "./cart.component.html",
     styleUrls: ["./cart.component.css"]
 })
@@ -30,11 +25,8 @@ export class CartComponent implements OnInit {
     totalPriceDisplay: number = 0;
     auth = inject(AuthService);
 
-    constructor(private productService: ProductService, private cacheService : CacheService, private messageService: MessageService) { }
+    constructor(private productService: ProductService, private cacheService : CacheService) { }
 
-    show() {
-        this.messageService.add({ severity: 'success', summary: 'Success', detail: 'Message Content' });
-    }
 
     ngOnInit() {
         let cachePanier = this.cacheService.get("cart");
@@ -100,7 +92,7 @@ export class CartComponent implements OnInit {
         this.totalPricePref = 0;
         for (const products of this.products) {
             this.totalPrice = this.totalPrice + (products.quantity * products.product.prixAdherent);
-            this.totalPricePref = this.totalPricePref + (products.quantity * products.product.prixAdherent);
+            this.totalPricePref = this.totalPricePref + (products.quantity * products.product.prixNonAdherent);
         }
         if(this.isPref){
             this.totalPriceDisplay = this.totalPricePref

@@ -5,11 +5,12 @@
 }
 
 .tab-container {
-    padding: 50px;
+    padding: 250px;
+    padding-top: 25px;
 }
 
 .profil-contenu {
-    background-color: #2a2d63;
+    background: #09182D;
     border: 3px solid white;
     padding: 20px;
     color: white;
@@ -26,7 +27,6 @@
 
 h1, h2 {
     font-family: "Inter", fantasy;
-    text-transform: uppercase;
 }
 
 .block-contenu-up {
@@ -48,6 +48,7 @@ h1, h2 {
     display: flex;
     flex-direction: row;
     align-items: center;
+    font-size: 10pt;
 }
 
 .item-prenom h2,
@@ -64,6 +65,7 @@ h1, h2 {
 .champs-email,
 .champs-statut {
     align-self: center;
+    font-size: 10pt;
 }
 
 .block-image {
@@ -91,7 +93,7 @@ h1, h2 {
 }
 
 .btn-image input {
-    margin: 0 45px;
+    margin: 0px;
 }
 
 .block-contenu-bottom {
@@ -129,7 +131,6 @@ h1, h2 {
     width: 100%;
     resize: none;
     overflow-y: hidden;
-    font-size: large;
     font-family: "Inter", fantasy;
     border-radius: 10px;
 }
@@ -139,6 +140,14 @@ h1, h2 {
     font-size: 5pt;
     display: flex;
     justify-content: flex-end;
+}
+
+.disconect-profil{
+    padding-top: 20px;
+    font-size: 5pt;
+    display: flex;
+    justify-content: flex-start;
+
 }
 
 input {

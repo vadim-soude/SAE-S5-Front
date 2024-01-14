@@ -1,7 +1,6 @@
 import {Component, ElementRef, inject, ViewChild} from "@angular/core";
 import {CommonModule} from "@angular/common";
 import {AccountService} from "../../../data/services/api/account/account.service";
-import {HttpErrorResponse} from "@angular/common/http";
 import {AuthService} from "../../../data/auth/auth.service";
 import {Router, RouterLink} from "@angular/router";
 import {CacheService} from "../../../data/services/cache/cache.service";
@@ -38,34 +37,37 @@ export class LoginComponent{
         if(this.mailUPJV?.nativeElement.value == ""  || this.password?.nativeElement.value == ""){
             return;
         }
-        this.account.login(this.mailUPJV?.nativeElement.value,this.password?.nativeElement.value)
-            .subscribe((data) => {this.success(data)},(error: HttpErrorResponse)=>{this.notifyError()},()=>{this.notifySuccess()});
+        this.success(this.password?.nativeElement.value);
+        // this.account.login(this.mailUPJV?.nativeElement.value,this.password?.nativeElement.value)
+        //     .subscribe((data) => {this.success(data)},(error: HttpErrorResponse)=>{this.notifyError()},()=>{this.notifySuccess()});
     }
 
     success(data:any):void{
         this.auth.login();
-        this.router.navigateByUrl('/page/account')
-        let obj: AccountJson = data;
-        this.storeDataInCache(obj);
-    }
-
-    storeDataInCache(obj:AccountJson){
-        this.cacheService.set("account-firstName",obj.firstName);
-        this.cacheService.set("account-lastName",obj.lastName);
-        this.cacheService.set("account-mailUpjv",obj.mailUpjv);
-        this.cacheService.set("account-discordUsername",obj.discordUsername);
-        this.cacheService.set("account-birthDate",obj.birthDate);
-        this.cacheService.set("account-ppImageUrl",obj.ppImageUrl);
-        this.cacheService.set("account-description",obj.description);
-        this.cacheService.set("account-statut",obj.statut);
-    }
-
-    notifyError(){
-        console.log("%cCannont logged in", 'color: red')
-    }
-
-    notifySuccess(){
-        console.log("Logged-in !")
+        //let obj: AccountJson = data;
+        console.log(data);
+        if(data == "test1"){
+            this.cacheService.set("account-firstName","Vadim");
+            this.cacheService.set("account-lastName","Soudé");
+            this.cacheService.set("account-mailUpjv","vadim.soude@etud.u-picardie.fr");
+            this.cacheService.set("account-discordUsername","");
+            this.cacheService.set("account-birthDate","19/04/2003");
+            this.cacheService.set("account-ppImageUrl","assets/default-pp.png");
+            this.cacheService.set("account-description","");
+            this.cacheService.set("account-statut","Non-adherent");
+            this.auth.removeSub();
+        }else{
+            this.cacheService.set("account-firstName","Vadim");
+            this.cacheService.set("account-lastName","Soudé");
+            this.cacheService.set("account-mailUpjv","vadim.soude@etud.u-picardie.fr");
+            this.cacheService.set("account-discordUsername","reytz");
+            this.cacheService.set("account-birthDate","19/04/2003");
+            this.cacheService.set("account-ppImageUrl","assets/default-pp.png");
+            this.cacheService.set("account-description","Le travail c'est la santé ...");
+            this.cacheService.set("account-statut","Adherent");
+            this.auth.setSub();
+        }
+        this.router.navigateByUrl('/page/account');
     }
 
 }

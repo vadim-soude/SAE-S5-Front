@@ -16,6 +16,14 @@ export class AuthService {
         this.isLoggedIn = false;
     }
 
+    setSub(){
+        this.isSub = false;
+    }
+
+    removeSub(){
+        this.isSub = true;
+    }
+
     public isAuthenticated(): boolean {
         return this.isLoggedIn;
     }
