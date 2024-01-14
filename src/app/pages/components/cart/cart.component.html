@@ -52,9 +52,9 @@
             <input type="checkbox" id="switch2" (click)="debugSwitch2()">
         </div>
 
-        <button *ngIf="totalPriceDisplay >= 1 && isConditionOk" class="buttonAdd" >Valider et payer</button>
-        <button *ngIf="totalPriceDisplay >= 1 && !isConditionOk" class="buttonAddNo" >Valider et payer</button>
-        <div *ngIf="totalPriceDisplay < 1" class="buttonAddNo" >Payment impossible sous 1€</div>
+        <button *ngIf="totalPriceDisplay >= 1 && isConditionOk" class="buttonAdd" >Valider et payer (Paypal)</button>
+        <button *ngIf="totalPriceDisplay >= 1 && !isConditionOk" class="buttonAddNo" >Valider et payer (Paypal)</button>
+        <div *ngIf="totalPriceDisplay < 1" class="buttonAddNo" >Paiement impossible sous 1€</div>
     </div>
 
     <div class="containerInfo">

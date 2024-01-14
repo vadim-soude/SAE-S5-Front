@@ -20,7 +20,7 @@ export class ShopComponent implements OnInit {
     productCat: IProductTypeModel[] = [
         {
             index: 0,
-            text: "boisson"
+            text: "Snacks"
         },
     ];
     productsIndex = [0, 0, 0, 0, 0];

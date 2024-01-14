@@ -26,9 +26,9 @@ export class HomeService {
         },
         {
             id: "contenu-4",
-            nom: "Secret Première",
+            nom: "Secret Premières",
             content: "",
-            nomPartenaire: "Secret Première",
+            nomPartenaire: "Secret Premières",
             imageURL: "assets/home/secret_premiere_logo.png"
         },
         {

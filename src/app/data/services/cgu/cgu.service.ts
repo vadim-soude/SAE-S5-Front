@@ -12,7 +12,7 @@ export class CguService {
     private cgu: ICguModel[] = [
         {
             id: "titre-0",
-            titre: "Condition Générale d'Utilisation",
+            titre: "Conditions Générales d'Utilisation",
             contenu:""
         },
         {

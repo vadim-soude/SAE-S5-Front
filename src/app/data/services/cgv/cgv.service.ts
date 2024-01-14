@@ -12,7 +12,7 @@ export class CgvService {
     private cgv: ICgvModel[] = [
         {
             id: "titre-0",
-            titre: "Condition Générale de Vente",
+            titre: "Conditions Générales de Vente",
             contenu:""
         },
         {

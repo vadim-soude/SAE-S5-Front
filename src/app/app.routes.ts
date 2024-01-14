@@ -13,7 +13,7 @@ export const routes: Routes = [
     {
         path: 'page/account',
         component: AccountComponent,
-        //canActivate: [AuthGuard], // Utilisation du guard
+        canActivate: [AuthGuard], // Utilisation du guard
     },
 	{
 		path: "",
